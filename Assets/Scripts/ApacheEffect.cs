@@ -13,7 +13,7 @@ public class ApacheEffect : MonoBehaviour
     Color fadeStartValue;
     Color fadeEndValue;
 
-    public float apacheMinHeight = 0,6f;
+    public float apacheMinHeight = 0.6f;
 
     void Start()
     {
