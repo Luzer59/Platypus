@@ -24,7 +24,7 @@ public class ApacheEffect : MonoBehaviour
     }
     void FadeRooms()
     {
-        if (player1Script.GetActiveStatus() == true)
+        if (player1Script.active == true)
         {
             if (resetLerp)
             {
