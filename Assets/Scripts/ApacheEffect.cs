@@ -13,6 +13,8 @@ public class ApacheEffect : MonoBehaviour
     Color fadeStartValue;
     Color fadeEndValue;
 
+    public float apacheMinHeight = 0,6f;
+
     void Start()
     {
         player1Script = GameObject.Find("Player1").GetComponent<Player>();
@@ -20,9 +22,9 @@ public class ApacheEffect : MonoBehaviour
 
     void Update()
     {
-        FadeRooms();
+        FadeBackground();
     }
-    void FadeRooms()
+    void FadeBackground()
     {
         if (player1Script.active == true)
         {
@@ -72,5 +74,10 @@ public class ApacheEffect : MonoBehaviour
 
             background.color = newFadeValue;
         }
+    }
+    void SpawnApaches()
+    {
+        Camera.main.ViewportToWorldPoint(new Vector3(0, apacheMinHeight, 0));
+        Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0));
     }
 }
