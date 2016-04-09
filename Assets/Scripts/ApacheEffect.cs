@@ -26,7 +26,7 @@ public class ApacheEffect : MonoBehaviour
     public float apacheMaxHeight = 3.5f;
     public float apacheMinHeight = -3.5f;
 
-    void Start()
+    void Awake()
     {
         player1Script = GameObject.Find("Player1").GetComponent<Player1>();
         gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -115,19 +115,22 @@ public class ApacheEffect : MonoBehaviour
         float spawnPosMinY = apacheMinHeight;
         float spawnPosMaxY = 8;
 
-        for (int i = 0; i < apacheCount; i++)
+        if (apacheList.Count < apacheCount)
         {
-            GameObject instance = (GameObject)Instantiate(apache, new Vector3(0, 0, 0), Quaternion.identity);
-            apacheList.Add(instance);
+            for (int i = 0; i < apacheCount; i++)
+            {
+                GameObject instance = (GameObject)Instantiate(apache, new Vector3(0, 0, 0), Quaternion.identity);
+                apacheList.Add(instance);
 
-            float spawnPosX = Random.Range(spawnPosMinX, spawnPosMaxX);
-            float spawnPosY = Random.Range(spawnPosMinY, spawnPosMaxY);
-            instance.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
+                float spawnPosX = Random.Range(spawnPosMinX, spawnPosMaxX);
+                float spawnPosY = Random.Range(spawnPosMinY, spawnPosMaxY);
+                instance.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
 
-            spawnPosMinX += spawnAreaPartX;
-            spawnPosMaxX += spawnAreaPartX;
+                spawnPosMinX += spawnAreaPartX;
+                spawnPosMaxX += spawnAreaPartX;
 
-            instance.GetComponent<ApacheMover>().SetValues(Random.Range(5, 20));
+                instance.GetComponent<ApacheMover>().SetValues(Random.Range(5, 20));
+            }
         }
     }
     void SetApacheSprites()
@@ -151,5 +154,11 @@ public class ApacheEffect : MonoBehaviour
                     break;
             }
         }
+    }
+    public void NewLevel()
+    {
+        SetLevelType();
+        SpawnApaches();
+        SetApacheSprites();
     }
 }

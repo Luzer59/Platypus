@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ApacheMover : MonoBehaviour {
 
-
+    public float rotateSpeed = 2;
     public float speedModifier = 1;
     private float speed;
     public float scaleModifier = 0.05f;
@@ -17,10 +17,12 @@ public class ApacheMover : MonoBehaviour {
 	
 	void Update ()
     {
+        transform.Rotate(Vector3.back, rotateSpeed);
         transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
+
         if (transform.position.x > 11)
         {
-            transform.position = new Vector2(-11, Random.Range(-3.5f, 3.5f)); //<- poista purkka myöhemmin
+            transform.position = new Vector2(-11, Random.Range(-3.5f, 3.5f)); // <- poista purkka myöhemmin
             SetValues(Random.Range(5, 20));
         }
 	}

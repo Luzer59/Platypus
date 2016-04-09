@@ -88,6 +88,7 @@ public class GameController : MonoBehaviour
     void Reset()
     {
         roundTimer = roundStartTime;
+        GetComponent<ApacheEffect>().NewLevel();
     }
 
     void TimerCountdown()
