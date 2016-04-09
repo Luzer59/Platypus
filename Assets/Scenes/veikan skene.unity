@@ -124,6 +124,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 21295008, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 13d49767b4357a44486e81f85486d9d9,
+        type: 3}
+    - target: {fileID: 449682, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 449682, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
   m_IsPrefabParent: 0
@@ -138,7 +151,7 @@ GameObject:
   - 212: {fileID: 1028764970}
   m_Layer: 0
   m_Name: dickbutt_background
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +251,7 @@ GameObject:
   - 212: {fileID: 1216454954}
   m_Layer: 0
   m_Name: dickbutt_back_background
-  m_TagString: Untagged
+  m_TagString: BackBackground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,7 +386,7 @@ Transform:
   - {fileID: 1028764969}
   - {fileID: 1216454953}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!114 &1269832172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +398,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2009962d0787b0c41bc4cfc9762353e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 1028764970}
+  apache: {fileID: 171748, guid: b40c761e735e80a4ebd3fc6f5a8babb9, type: 2}
+  apacheCount: 5
+  levelTypes:
+  - {fileID: 21300000, guid: 2d1068c332277db449f03c7a940e3c91, type: 3}
+  - {fileID: 21300000, guid: c75c1e964bd22814a9f6ddec0505b5e2, type: 3}
+  - {fileID: 21300000, guid: cc4b14d172540684ab86b1e39c4f17ff, type: 3}
+  apacheTypes:
+  - {fileID: 21300000, guid: f73ef0da763211247a5a91aef6630644, type: 3}
+  - {fileID: 21300000, guid: 364378902f4af3a47b229b42cc9a28fb, type: 3}
+  - {fileID: 21300000, guid: 54e5d26a2926f4e46952a0b86160d90f, type: 3}
+  - {fileID: 21300000, guid: fd627038888dacc4bbb424d311f912f9, type: 3}
   apacheMinHeight: 0.6
 --- !u!1001 &1584479875
 Prefab:
@@ -425,6 +448,19 @@ Prefab:
     - target: {fileID: 455588, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 21208676, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 13d49767b4357a44486e81f85486d9d9,
+        type: 3}
+    - target: {fileID: 446790, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 446790, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d083051c629114c4987bf53d552de591, type: 2}
