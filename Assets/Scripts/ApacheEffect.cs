@@ -19,6 +19,7 @@ public class ApacheEffect : MonoBehaviour
     public List<Sprite> apacheTypes = new List<Sprite>();
 
     int currentLevelType = 0;
+    Sprite newLevelBack = null;
     SpriteRenderer background;
     SpriteRenderer backBackground;
 
@@ -101,7 +102,6 @@ public class ApacheEffect : MonoBehaviour
     void SetLevelType()
     {
         //set level type (= background)
-        Sprite newLevelBack = null;
         Sprite oldLevelBack = newLevelBack;
         while (newLevelBack == null || newLevelBack == oldLevelBack)
         {
@@ -162,6 +162,7 @@ public class ApacheEffect : MonoBehaviour
     }
     public void NewLevel()
     {
+        background.color = new Color(background.color.r, background.color.g, background.color.b, 1.0f); 
         SetLevelType();
         SpawnApaches();
         SetApacheSprites();

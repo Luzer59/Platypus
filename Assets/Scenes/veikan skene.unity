@@ -231,6 +231,22 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 21257952, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21257952, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21257952, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21257952, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
   m_IsPrefabParent: 0
@@ -387,7 +403,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: 2d1068c332277db449f03c7a940e3c91, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -490,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001fcb085b331c94394ee599b95b9934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 1
+  intensity: 0.3
   shakeActive: 0
 --- !u!1 &1581819815
 GameObject:
@@ -608,6 +624,22 @@ Prefab:
     - target: {fileID: 21238190, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: m_SortingOrder
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 21238190, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21238190, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21238190, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21238190, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d083051c629114c4987bf53d552de591, type: 2}
