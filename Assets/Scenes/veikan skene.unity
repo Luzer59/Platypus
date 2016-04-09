@@ -85,6 +85,10 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &36108942 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 102396, guid: 0ec93d1d078f002489cd47712c9ff4a8, type: 2}
+  m_PrefabInternal: {fileID: 712640535}
 --- !u!1001 &712640535
 Prefab:
   m_ObjectHideFlags: 0
@@ -168,6 +172,10 @@ Prefab:
       propertyPath: shakeActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11446624, guid: 0ec93d1d078f002489cd47712c9ff4a8, type: 2}
+      propertyPath: activator
+      value: 
+      objectReference: {fileID: 36108942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ec93d1d078f002489cd47712c9ff4a8, type: 2}
   m_IsPrefabParent: 0
@@ -178,6 +186,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[0].sprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 488030, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -247,6 +259,26 @@ Prefab:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[0].sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ff52e6ef80bd1747a3814abecc78d7e,
+        type: 3}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[0].sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300002, guid: 7ff52e6ef80bd1747a3814abecc78d7e,
+        type: 3}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[0].sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300004, guid: 7ff52e6ef80bd1747a3814abecc78d7e,
+        type: 3}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[0].sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300006, guid: 7ff52e6ef80bd1747a3814abecc78d7e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
   m_IsPrefabParent: 0

@@ -27,7 +27,7 @@ public class Player2 : PlayerBase
     {
         currentLife = maxLife;
         gameController.player2Alive = true;
-        position = 0f;
+        position = 0;
         lastPosition = position;
         active = false;
     }

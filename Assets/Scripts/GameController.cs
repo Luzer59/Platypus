@@ -40,6 +40,11 @@ public class GameController : MonoBehaviour
     private GameState savedState;
     private ApacheEffect apacheEffect;
 
+    //confetti shoot stuff
+    public bool player1won = false;
+    public bool player2won = false;
+    public bool confettiShot = false;
+
     void Awake()
     {
         InitializeSingleton();
@@ -86,7 +91,10 @@ public class GameController : MonoBehaviour
         if (apacheEffect)
         {
             apacheEffect.NewLevel();
-        }        
+        }
+        player1won = false;
+        player2won = false;
+        confettiShot = false;
     }
 
     void TimerCountdown()
@@ -196,10 +204,12 @@ public class GameController : MonoBehaviour
         if(player1Alive)
         {
             print("Player 1 wins");
+            player1won = true;
         }
         else
         {
             print("Player 2 wins");
+            player2won = true;
         }
         yield return new WaitForSeconds(endGameDelay);
         StartNewGame();
