@@ -8,12 +8,17 @@ public class ApacheMover : MonoBehaviour {
     private float speed;
     public float scaleModifier = 0.05f;
     SpriteRenderer sr;
+    ApacheEffect ae;
 
 	void Awake ()
     {
         speed = speedModifier;
         sr = GetComponent<SpriteRenderer>();
-	}
+    }
+    void Start()
+    {
+        ae = GameObject.FindGameObjectWithTag("GameController").GetComponent<ApacheEffect>();
+    }
 	
 	void Update ()
     {
@@ -22,7 +27,7 @@ public class ApacheMover : MonoBehaviour {
 
         if (transform.position.x > 11)
         {
-            transform.position = new Vector2(-11, Random.Range(-3.5f, 3.5f)); // <- poista purkka myöhemmin
+            transform.position = new Vector2(-11, Random.Range((float)ae.apacheMinHeight, (float)ae.apacheMaxHeight));
             SetValues(Random.Range(5, 20));
         }
 	}
@@ -32,5 +37,13 @@ public class ApacheMover : MonoBehaviour {
         this.sr.sortingOrder = order;
         this.speed = order * speedModifier;
         transform.localScale = new Vector3(order * scaleModifier, order * scaleModifier, 1);
+        if (Random.Range(0,2) == 0)
+        {
+            this.sr.flipX = false;
+        }
+        else
+        {
+            this.sr.flipX = true;
+        }
     }
 }

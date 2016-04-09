@@ -11,12 +11,17 @@ public class ApacheEffect : MonoBehaviour
     List<GameObject> apacheList = new List<GameObject>();
     public int apacheCount;
 
+    public GameObject speedline;
+    List<GameObject> speedlineList = new List<GameObject>();
+    public int speedlineCount;
+
     public List<Sprite> levelTypes = new List<Sprite>();
     public List<Sprite> apacheTypes = new List<Sprite>();
 
     int currentLevelType = 0;
     SpriteRenderer background;
     SpriteRenderer backBackground;
+
     float lerpTime = 0.2f;
     float currentLerpTime;
     bool resetLerp;
@@ -31,11 +36,11 @@ public class ApacheEffect : MonoBehaviour
         player1Script = GameObject.Find("Player1").GetComponent<Player1>();
         gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         background = GameObject.FindGameObjectWithTag("Background").GetComponent<SpriteRenderer>();
-        backBackground = GameObject.FindGameObjectWithTag("BackBackground").GetComponent<SpriteRenderer>();
-
-        SetLevelType();
-        SpawnApaches();
-        SetApacheSprites();       
+        backBackground = GameObject.FindGameObjectWithTag("BackBackground").GetComponent<SpriteRenderer>();     
+    }
+    void Start()
+    {
+        SpawnSpeedlines();
     }
 
     void Update()
@@ -113,7 +118,7 @@ public class ApacheEffect : MonoBehaviour
         float spawnPosMaxX = -11 + spawnAreaPartX;
 
         float spawnPosMinY = apacheMinHeight;
-        float spawnPosMaxY = 8;
+        float spawnPosMaxY = apacheMaxHeight;
 
         if (apacheList.Count < apacheCount)
         {
@@ -160,5 +165,32 @@ public class ApacheEffect : MonoBehaviour
         SetLevelType();
         SpawnApaches();
         SetApacheSprites();
+    }
+    public void SpawnSpeedlines()
+    {
+        float spawnAreaPartX = speedlineCount / 22;
+        float spawnPosMinX = -11;
+        float spawnPosMaxX = -11 + spawnAreaPartX;
+
+        float spawnPosMinY = apacheMinHeight;
+        float spawnPosMaxY = apacheMaxHeight;
+
+        if (speedlineList.Count < speedlineCount)
+        {
+            for (int i = 0; i < speedlineCount; i++)
+            {
+                GameObject instance = (GameObject)Instantiate(speedline, new Vector3(0, 0, 0), Quaternion.identity);
+                speedlineList.Add(instance);
+
+                float spawnPosX = Random.Range(spawnPosMinX, spawnPosMaxX);
+                float spawnPosY = Random.Range(spawnPosMinY, spawnPosMaxY);
+                instance.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
+
+                spawnPosMinX += spawnAreaPartX;
+                spawnPosMaxX += spawnAreaPartX;
+
+                instance.GetComponent<SpeedlineMover>().SetValues(Random.Range(5, 20));
+            }
+        }
     }
 }
