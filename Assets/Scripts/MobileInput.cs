@@ -9,20 +9,21 @@ public class MobileInput : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
-            Touch touch = Input.GetTouch(0);
-
-            if (dir == Direction.Left)
+            foreach (Touch touch in Input.touches)
             {
-                if (touch.position.x < Screen.width / 2)
+                if (dir == Direction.Left)
                 {
-                    return true;
+                    if (touch.position.x < Screen.width / 2)
+                    {
+                        return true;
+                    }
                 }
-            }
-            else if (dir == Direction.Right)
-            {
-                if (touch.position.x >= Screen.width / 2)
+                else if (dir == Direction.Right)
                 {
-                    return true;
+                    if (touch.position.x >= Screen.width / 2)
+                    {
+                        return true;
+                    }
                 }
             }
         }

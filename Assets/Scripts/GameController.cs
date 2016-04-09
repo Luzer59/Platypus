@@ -180,8 +180,11 @@ public class GameController : MonoBehaviour
 
     public System.Action OnGameEnd { get; set; }
 
+    public System.Action OnGameStart { get; set; }
+
     IEnumerator StartGame()
     {
+        OnGameStart();
         yield return new WaitForSeconds(startGameDelay);
         gameState = GameState.GamePlay;
     }

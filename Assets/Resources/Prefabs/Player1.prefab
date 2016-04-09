@@ -26,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 487322}
   - 212: {fileID: 21257952}
+  - 114: {fileID: 11499372}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -40,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 0, z: 0}
+  m_LocalPosition: {x: -4.22, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 487322}
@@ -54,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 164948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16613759, y: 0.16613759, z: 0.16613759}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 454084}
   m_RootOrder: 0
@@ -154,8 +155,26 @@ MonoBehaviour:
   active: 0
   isMoving: 0
   actionSound: {fileID: 0}
-  healthGain: 120
-  healthLoss: 40
+  playerSide: 0
+  healthGain: 100
+  healthLoss: 30
+--- !u!114 &11499372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc263f529fd8e74d80872812e8f6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300002, guid: eb616f795e63a374aa919156a06ef170, type: 3}
+  - {fileID: 21300004, guid: eb616f795e63a374aa919156a06ef170, type: 3}
+  - {fileID: 21300006, guid: eb616f795e63a374aa919156a06ef170, type: 3}
+  - {fileID: 21300000, guid: f7277b1b7f771ff43a0c40830ce91f57, type: 3}
+  player: {fileID: 11439490}
 --- !u!212 &21257952
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -182,9 +201,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 13d49767b4357a44486e81f85486d9d9, type: 3}
+  m_Sprite: {fileID: 21300002, guid: eb616f795e63a374aa919156a06ef170, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:

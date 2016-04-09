@@ -154,6 +154,7 @@ MonoBehaviour:
   active: 0
   isMoving: 0
   actionSound: {fileID: 0}
+  playerSide: 1
 --- !u!212 &21238190
 SpriteRenderer:
   m_ObjectHideFlags: 1
