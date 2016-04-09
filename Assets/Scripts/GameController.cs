@@ -2,7 +2,7 @@
 using System.Collections;
 
 public enum ShakeCondition { WhenActive, WhenMoving }
-public enum GameState { GameStart, GamePlay, GameEnd, Menu }
+public enum GameState { Start, GamePlay, GameEnd, Menu }
 
 public class GameController : MonoBehaviour
 {
@@ -40,8 +40,8 @@ public class GameController : MonoBehaviour
     [ReadOnly]
     public UIShake uiShake;
     public ShakeCondition shakeCondition;
-    [ReadOnly]
-    public GameState gameState = GameState.GamePlay;
+    public GameState gameState = GameState.Start;
+    public float startGameDelay;
     public float endGameDelay;
 
     private GameState savedState;
@@ -56,6 +56,7 @@ public class GameController : MonoBehaviour
         player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player1>();
         player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player2>();
         Reset();
+        StartCoroutine(StartGame());
     }
 
     void Update()
@@ -171,6 +172,12 @@ public class GameController : MonoBehaviour
     }
 
     public System.Action OnGameEnd { get; set; }
+
+    IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(startGameDelay);
+        gameState = GameState.GamePlay;
+    }
 
     IEnumerator EndGame()
     {
