@@ -25,7 +25,7 @@ public class Player1 : PlayerBase
     void Movement()
     {
         lastPosition = position;
-        if (Input.GetKey(button) && controlsActive && gameController.gameState == GameState.GamePlay)
+        if ((Input.GetKey(button) || MobileInput.GetTouch(playerSide)) && controlsActive && gameController.gameState == GameState.GamePlay)
         {
             position += speed;
         }

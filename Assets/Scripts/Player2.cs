@@ -4,6 +4,7 @@ using System.Collections;
 public class Player2 : PlayerBase
 {
     private bool activatedNow;
+    private bool forceBack = false;
 
     protected override void Start()
     {
@@ -32,10 +33,8 @@ public class Player2 : PlayerBase
 
     void ActivateAttack()
     {
-        if (active && !activatedNow && Input.GetKey(button))
+        if (active && !activatedNow && (Input.GetKey(button) || MobileInput.GetTouch(playerSide)))
         {
-            controlsActive = false;
-            activatedNow = true;
             gameController.Player2AttackCheck();
             StartCoroutine(AttackTimer());
         }
@@ -44,13 +43,28 @@ public class Player2 : PlayerBase
     void Movement()
     {
         lastPosition = position;
-        if (Input.GetKey(button) && controlsActive && gameController.gameState == GameState.GamePlay)
+        if (gameController.gameState == GameState.GamePlay)
         {
-            position += speed;
-        }
-        else if (!activatedNow)
-        {
-            position -= speed;
+            if (Input.GetKey(button) || MobileInput.GetTouch(playerSide))
+            {
+                if (controlsActive)
+                {
+                    position += speed;
+                }
+            }
+            else
+            {
+                if (controlsActive)
+                {
+                    position -= speed;
+                }
+
+            }
+
+            if (forceBack)
+            {
+                position -= speed;
+            }
         }
 
         position = Mathf.Clamp01(position);
@@ -62,8 +76,13 @@ public class Player2 : PlayerBase
 
     IEnumerator AttackTimer()
     {
-        yield return new WaitForSeconds(1f);
-        activatedNow = false;
+        activatedNow = true;
+        controlsActive = false;
+        yield return new WaitForSeconds(0.5f);
+        forceBack = true;
+        yield return new WaitForSeconds(0.5f);
+        forceBack = false;
         controlsActive = true;
+        activatedNow = false;
     }
 }

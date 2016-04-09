@@ -24,20 +24,13 @@ public class GameController : MonoBehaviour
     }
     #endregion
 
-    [ReadOnly]
     public Player1 player1;
-    [ReadOnly]
     public Player2 player2;
-    [ReadOnly]
     public bool player1Alive = true;
-    [ReadOnly]
     public bool player2Alive = true;
     public float roundStartTime;
-    [ReadOnly]
     public float roundTimer = 0f;
-    [ReadOnly]
     public CameraShake cameraShake;
-    [ReadOnly]
     public UIShake uiShake;
     public ShakeCondition shakeCondition;
     public GameState gameState = GameState.Start;
@@ -206,7 +199,7 @@ public class GameController : MonoBehaviour
 
     public void StartNewGame()
     {
-        gameState = GameState.GamePlay;
+        StartCoroutine(StartGame());
         Reset();
         player1.Reset();
         player2.Reset();

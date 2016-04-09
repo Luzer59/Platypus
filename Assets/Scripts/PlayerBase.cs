@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PlayerBase : MonoBehaviour
 {
-    [ReadOnly]
     public float position;
     public Vector2 startPos;
     public Vector2 endPos;
@@ -11,13 +10,11 @@ public class PlayerBase : MonoBehaviour
     public string button;
     public float activeZone;
     public float maxLife;
-    [ReadOnly]
     public float currentLife;
-    [ReadOnly]
     public bool active;
-    [ReadOnly]
     public bool isMoving = false;
     public AudioClip actionSound;
+    public Direction playerSide;
 
     protected bool controlsActive = true;
     protected GameController gameController;
@@ -55,7 +52,7 @@ public class PlayerBase : MonoBehaviour
 
     void PlayActionSound()
     {
-        if (Input.GetKey(button))
+        if (Input.GetKey(button) || MobileInput.GetTouch(playerSide))
         {
             audio.PlayOneShot(actionSound);
         }
