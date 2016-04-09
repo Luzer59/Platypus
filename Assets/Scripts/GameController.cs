@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     public Player2 player2;
     public bool player1Alive = true;
     public bool player2Alive = true;
-    public float roundTime;
+    public float roundStartTime;
     public float roundTimer = 0f;
     public bool gameEnd = false;
 
@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
 
     void Reset()
     {
-        roundTimer = roundTime;
+        roundTimer = roundStartTime;
     }
 
     void TimerCountdown()
@@ -62,30 +62,26 @@ public class GameController : MonoBehaviour
 
     void CheckEndConditions()
     {
-        if (player1.active && player2.active)
-        {
-            player1.Life -= player1.maxLife;
-        }
         if (player1.active && !player2.active)
         {
-            player1.Life += player1.healthGain * Time.deltaTime;
+            player1.currentLife += player1.healthGain * Time.deltaTime;
         }
         if (!player1.active)
         {
-            player1.Life -= player1.healthLoss * Time.deltaTime;
+            player1.currentLife -= player1.healthLoss * Time.deltaTime;
         }
         if (roundTimer <= 0f)
         {
-            player2.Life -= player2.maxLife;
+            player2.currentLife -= player2.maxLife;
         }
-        if (player1.Life <= 0)
+        if (player1.currentLife <= 0)
         {
-            player1.Life = 0;
+            player1.currentLife = 0;
             player1Alive = false;
         }
-        if (player2.Life <= 0)
+        if (player2.currentLife <= 0)
         {
-            player2.Life = 0;
+            player2.currentLife = 0;
             player2Alive = false;
         }
         if (!player1Alive)
@@ -95,6 +91,18 @@ public class GameController : MonoBehaviour
         if (!player2Alive)
         {
             StartCoroutine(EndGame());
+        }
+    }
+
+    public void Player2AttackCheck()
+    {
+        if (player1.active)
+        {
+            player1.currentLife -= player1.maxLife;
+        }
+        else
+        {
+            player2.currentLife--;
         }
     }
 
@@ -108,7 +116,6 @@ public class GameController : MonoBehaviour
         {
             print("Player 2 wins");
         }
-
         gameEnd = true;
         yield return new WaitForSeconds(1.5f);
         gameEnd = false;
