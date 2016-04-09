@@ -19,15 +19,18 @@ public class UIShake : MonoBehaviour
 
     void Update()
     {
-        if (shakeActive)
-        {  
-            ShakeShakeShake();
-            shakeWasActive = true;
-        }
-        else if (shakeWasActive)
+        if (GameController.instance.gameState == GameState.GamePlay)
         {
-            ShakeReset();
-            shakeWasActive = false;
+            if (shakeActive)
+            {
+                ShakeShakeShake();
+                shakeWasActive = true;
+            }
+            else if (shakeWasActive)
+            {
+                ShakeReset();
+                shakeWasActive = false;
+            }
         }
     }
 

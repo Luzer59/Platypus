@@ -21,15 +21,18 @@ public class CameraShake : MonoBehaviour
 
     void Update()
     {
-        if (shakeActive)
+        if (GameController.instance.gameState == GameState.GamePlay)
         {
-            ShakeShakeShake();
-            shakeWasActive = true;
-        }
-        else if (shakeWasActive)
-        {
-            ShakeReset();
-            shakeWasActive = false;
+            if (shakeActive)
+            {
+                ShakeShakeShake();
+                shakeWasActive = true;
+            }
+            else if (shakeWasActive)
+            {
+                ShakeReset();
+                shakeWasActive = false;
+            }
         }
     }
 

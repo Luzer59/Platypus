@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum ShakeCondition { WhenActive, WhenMoving }
+public enum GameState { GameStart, GamePlay, GameEnd, Menu }
+
 public class GameController : MonoBehaviour
 {
     #region Singleton structure
@@ -21,15 +24,27 @@ public class GameController : MonoBehaviour
     }
     #endregion
 
+    [ReadOnly]
     public Player1 player1;
+    [ReadOnly]
     public Player2 player2;
+    [ReadOnly]
     public bool player1Alive = true;
+    [ReadOnly]
     public bool player2Alive = true;
     public float roundStartTime;
+    [ReadOnly]
     public float roundTimer = 0f;
-    public bool gameEnd = false;
+    [ReadOnly]
     public CameraShake cameraShake;
+    [ReadOnly]
     public UIShake uiShake;
+    public ShakeCondition shakeCondition;
+    [ReadOnly]
+    public GameState gameState = GameState.GamePlay;
+    public float endGameDelay;
+
+    private GameState savedState;
 
     void Awake()
     {
@@ -45,7 +60,23 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (!gameEnd)
+        if (gameState != GameState.Menu)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                savedState = gameState;
+                gameState = GameState.Menu;
+            }
+        }
+        else if (gameState == GameState.Menu)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                gameState = savedState;
+            }
+        }
+
+        if (gameState == GameState.GamePlay)
         {
             ShakeCheck();
             TimerCountdown();
@@ -65,15 +96,31 @@ public class GameController : MonoBehaviour
 
     void ShakeCheck()
     {
-        if (player1.active || player2.active)
+        if (shakeCondition == ShakeCondition.WhenActive)
         {
-            cameraShake.shakeActive = true;
-            uiShake.shakeActive = true;
+            if (player1.active || player2.active)
+            {
+                cameraShake.shakeActive = true;
+                uiShake.shakeActive = true;
+            }
+            else
+            {
+                cameraShake.shakeActive = false;
+                uiShake.shakeActive = false;
+            }
         }
-        else
+        else if (shakeCondition == ShakeCondition.WhenMoving)
         {
-            cameraShake.shakeActive = false;
-            uiShake.shakeActive = false;
+            if (player1.isMoving || player2.isMoving)
+            {
+                cameraShake.shakeActive = true;
+                uiShake.shakeActive = true;
+            }
+            else
+            {
+                cameraShake.shakeActive = false;
+                uiShake.shakeActive = false;
+            }
         }
     }
 
@@ -89,7 +136,7 @@ public class GameController : MonoBehaviour
         }
         if (roundTimer <= 0f)
         {
-            player2.currentLife -= player2.maxLife;
+            player2.currentLife = 0f;
         }
         if (player1.currentLife <= 0)
         {
@@ -115,7 +162,7 @@ public class GameController : MonoBehaviour
     {
         if (player1.active)
         {
-            player1.currentLife -= player1.maxLife;
+            player1.currentLife = 0f;
         }
         else
         {
@@ -123,8 +170,12 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public System.Action OnGameEnd { get; set; }
+
     IEnumerator EndGame()
     {
+        OnGameEnd();
+        gameState = GameState.GameEnd;
         if(player1Alive)
         {
             print("Player 1 wins");
@@ -133,14 +184,13 @@ public class GameController : MonoBehaviour
         {
             print("Player 2 wins");
         }
-        gameEnd = true;
-        yield return new WaitForSeconds(1.5f);
-        gameEnd = false;
+        yield return new WaitForSeconds(endGameDelay);
         StartNewGame();
     }
 
     public void StartNewGame()
     {
+        gameState = GameState.GamePlay;
         Reset();
         player1.Reset();
         player2.Reset();

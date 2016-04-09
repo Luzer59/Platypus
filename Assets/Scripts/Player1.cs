@@ -8,8 +8,12 @@ public class Player1 : PlayerBase
 
     protected override void Update()
     {
-        base.Update();
-        Movement();
+        if (gameController.gameState == GameState.GamePlay)
+        {
+            base.Update();
+            Movement();
+            CheckMovingStatus();
+        }
     }
 
     protected override void Start()
@@ -20,7 +24,8 @@ public class Player1 : PlayerBase
 
     void Movement()
     {
-        if (Input.GetKey(button) && controlsActive && !gameController.gameEnd)
+        lastPosition = position;
+        if (Input.GetKey(button) && controlsActive && gameController.gameState == GameState.GamePlay)
         {
             position += speed;
         }
@@ -41,5 +46,6 @@ public class Player1 : PlayerBase
         currentLife = maxLife;
         gameController.player1Alive = true;
         position = 0f;
+        lastPosition = position;
     }
 }

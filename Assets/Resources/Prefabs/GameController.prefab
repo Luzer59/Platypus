@@ -45,7 +45,11 @@ MonoBehaviour:
   player2Alive: 1
   roundStartTime: 10
   roundTimer: 0
-  gameEnd: 0
+  cameraShake: {fileID: 0}
+  uiShake: {fileID: 0}
+  shakeCondition: 1
+  gameState: 1
+  endGameDelay: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
