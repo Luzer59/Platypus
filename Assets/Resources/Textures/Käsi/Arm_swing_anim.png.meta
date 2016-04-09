@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: eb616f795e63a374aa919156a06ef170
+timeCreated: 1460210518
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Arm_swing_anim_0
+    21300002: Arm_swing_anim_1
+    21300004: Arm_swing_anim_2
+    21300006: Arm_swing_anim_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Arm_swing_anim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2600
+        height: 2400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -71, y: 99.5}
+        - {x: -14, y: -22.5}
+        - {x: -101, y: -8.5}
+        - {x: -166, y: 113.5}
+        - {x: -211, y: 138.5}
+        - {x: -241, y: 138.5}
+        - {x: -256, y: 123.5}
+        - {x: -256, y: 45.5}
+        - {x: -239, y: 6.5}
+        - {x: -146, y: -86.5}
+        - {x: -63, y: -97.5}
+        - {x: 66, y: -97.5}
+        - {x: 73, y: -70.5}
+        - {x: 73, y: 31.5}
+        - {x: 48, y: 62.5}
+    - name: Arm_swing_anim_1
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 2600
+        height: 2400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 82.5}
+        - {x: -55, y: 137.5}
+        - {x: -92, y: 137.5}
+        - {x: -139, y: 114.5}
+        - {x: -143, y: 97.5}
+        - {x: -83, y: 43.5}
+        - {x: -145, y: 97.5}
+        - {x: -192, y: 125.5}
+        - {x: -234, y: 123.5}
+        - {x: -253, y: 106.5}
+        - {x: -253, y: 41.5}
+        - {x: -238, y: -59.5}
+        - {x: -194, y: -107.5}
+        - {x: -174, y: -111.5}
+        - {x: -116, y: -111.5}
+        - {x: -14, y: -16.5}
+        - {x: 16, y: 13.5}
+        - {x: 16, y: 71.5}
+    - name: Arm_swing_anim_2
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 0
+        width: 2600
+        height: 2400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 192, y: -63.5}
+        - {x: 194, y: -51.5}
+        - {x: 194, y: 7.5}
+        - {x: 192, y: 22.5}
+        - {x: 122, y: 34.5}
+        - {x: 64, y: 7.5}
+        - {x: -27, y: 21.5}
+        - {x: -152, y: 111.5}
+        - {x: -193, y: 123.5}
+        - {x: -247, y: 123.5}
+        - {x: -252, y: 102.5}
+        - {x: -252, y: 39.5}
+        - {x: -230, y: 7.5}
+        - {x: -216, y: -5.5}
+        - {x: -164, y: -54.5}
+        - {x: -90, y: -83.5}
+        - {x: -77, y: -86.5}
+        - {x: -46, y: -86.5}
+        - {x: 16, y: -75.5}
+        - {x: 99, y: -86.5}
+        - {x: 162, y: -86.5}
+    - name: Arm_swing_anim_3
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 0
+        width: 2600
+        height: 2400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 202, y: 78.5}
+        - {x: 173, y: 73.5}
+        - {x: 147, y: 42.5}
+        - {x: 29, y: 90.5}
+        - {x: -53, y: 78.5}
+        - {x: -138, y: 95.5}
+        - {x: -235, y: 95.5}
+        - {x: -251, y: 85.5}
+        - {x: -254, y: 65.5}
+        - {x: -254, y: 7.5}
+        - {x: -234, y: -30.5}
+        - {x: -203, y: -39.5}
+        - {x: -106, y: -39.5}
+        - {x: 12, y: -36.5}
+        - {x: 47, y: -32.5}
+        - {x: 137, y: -19.5}
+        - {x: 189, y: -42.5}
+        - {x: 235, y: -42.5}
+        - {x: 254, y: -22.5}
+        - {x: 254, y: 32.5}
+        - {x: 237, y: 75.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

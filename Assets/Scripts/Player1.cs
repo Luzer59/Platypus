@@ -37,8 +37,7 @@ public class Player1 : PlayerBase
         position = Mathf.Clamp01(position);
 
         Vector2 currentPos = Vector2.Lerp(startPos, endPos, position);
-        transform.position = new Vector3(currentPos.x, currentPos.y, 0f);
-        transform.Rotate(Vector3.forward, 10);
+        //transform.position = new Vector3(currentPos.x, currentPos.y, 0f);
     }
 
     public override void Reset()

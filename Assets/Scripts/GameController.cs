@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour
     public float endGameDelay;
 
     private GameState savedState;
+    private ApacheEffect apacheEffect;
 
     void Awake()
     {
@@ -46,6 +47,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        apacheEffect = GetComponent<ApacheEffect>();
         player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player1>();
         player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player2>();
         Reset();
@@ -81,7 +83,10 @@ public class GameController : MonoBehaviour
     void Reset()
     {
         roundTimer = roundStartTime;
-        GetComponent<ApacheEffect>().NewLevel();
+        if (apacheEffect)
+        {
+            apacheEffect.NewLevel();
+        }        
     }
 
     void TimerCountdown()
