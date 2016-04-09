@@ -28,6 +28,8 @@ public class GameController : MonoBehaviour
     public float roundStartTime;
     public float roundTimer = 0f;
     public bool gameEnd = false;
+    public CameraShake cameraShake;
+    public UIShake uiShake;
 
     void Awake()
     {
@@ -45,6 +47,7 @@ public class GameController : MonoBehaviour
     {
         if (!gameEnd)
         {
+            ShakeCheck();
             TimerCountdown();
             CheckEndConditions();
         }
@@ -58,6 +61,20 @@ public class GameController : MonoBehaviour
     void TimerCountdown()
     {
         roundTimer -= Time.deltaTime;
+    }
+
+    void ShakeCheck()
+    {
+        if (player1.active || player2.active)
+        {
+            cameraShake.shakeActive = true;
+            uiShake.shakeActive = true;
+        }
+        else
+        {
+            cameraShake.shakeActive = false;
+            uiShake.shakeActive = false;
+        }
     }
 
     void CheckEndConditions()

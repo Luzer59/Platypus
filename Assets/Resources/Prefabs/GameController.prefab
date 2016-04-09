@@ -43,7 +43,7 @@ MonoBehaviour:
   player2: {fileID: 0}
   player1Alive: 1
   player2Alive: 1
-  roundTime: 10
+  roundStartTime: 10
   roundTimer: 0
   gameEnd: 0
 --- !u!1001 &100100000
