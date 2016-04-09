@@ -9,13 +9,13 @@ public abstract class PlayerBase : MonoBehaviour
     public float speed;
     public string button;
     public float activeZone;
-    public int maxLife;
+    public float maxLife;
     public bool active;
 
-    protected int currentLife;
+    protected float currentLife;
     protected GameController gameController;
 
-    public int Life
+    public float Life
     {
         get { return currentLife; }
         set { currentLife = value; }
@@ -24,6 +24,12 @@ public abstract class PlayerBase : MonoBehaviour
     protected virtual void Start()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    }
+
+    protected virtual void Update()
+    {
+        Movement();
+        SetActiveStatus();
     }
 
     protected void SetActiveStatus()
@@ -39,23 +45,10 @@ public abstract class PlayerBase : MonoBehaviour
     }
 
     public abstract void Reset();
-    
-    public void TakeDamage(int damage)
-    {
-        currentLife -= damage;
-        CheckHealth();
-    }
-
-    protected abstract void CheckHealth();
-
-    protected virtual void Update()
-    {
-        Movement();
-    }
 
     void Movement()
     {
-        if (Input.GetKey(button))
+        if (Input.GetKey(button) && !gameController.gameEnd)
         {
             position += speed;
         }

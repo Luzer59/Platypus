@@ -3,24 +3,13 @@ using System.Collections;
 
 public class Player1 : PlayerBase
 {
+    public int healthGain;
+    public int healthLoss;
+
     protected override void Start()
     {
         base.Start();
         Reset();
-    }
-
-    protected override void Update()
-    {
-        base.Update();
-        SetActiveStatus();
-    }
-
-    protected override void CheckHealth()
-    {
-        if (currentLife <= 0)
-        {
-            gameController.player1Alive = false;
-        }
     }
 
     public override void Reset()

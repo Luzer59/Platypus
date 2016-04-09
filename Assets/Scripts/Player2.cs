@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player2 : Player1
+public class Player2 : PlayerBase
 {
     protected override void Start()
     {
@@ -9,11 +9,10 @@ public class Player2 : Player1
         Reset();
     }
 
-    override protected void CheckHealth()
+    public override void Reset()
     {
-        if (currentLife <= 0)
-        {
-            gameController.player2Alive = false;
-        }
+        currentLife = maxLife;
+        gameController.player2Alive = true;
+        position = 0f;
     }
 }
