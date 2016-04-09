@@ -29,6 +29,7 @@ public class Player2 : PlayerBase
         gameController.player2Alive = true;
         position = 0f;
         lastPosition = position;
+        active = false;
     }
 
     void ActivateAttack()

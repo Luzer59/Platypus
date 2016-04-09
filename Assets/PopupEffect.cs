@@ -14,10 +14,17 @@ public class PopupEffect : MonoBehaviour
 
     IEnumerator Effect(float duration)
     {
-        yield return new WaitForSeconds(2f);
-        if (type == UiItemType.Text)
+        float timer = duration;
+        while (duration > 0f)
         {
+            duration -= Time.deltaTime;
 
+            if (type == UiItemType.Text)
+            {
+
+            }
+
+            yield return null;
         }
     }
 }

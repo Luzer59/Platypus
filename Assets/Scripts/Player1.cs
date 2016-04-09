@@ -46,5 +46,6 @@ public class Player1 : PlayerBase
         gameController.player1Alive = true;
         position = 0f;
         lastPosition = position;
+        active = false;
     }
 }

@@ -50,7 +50,7 @@ public class ApacheEffect : MonoBehaviour
     }
     void FadeBackground()
     {
-        if (player1Script.active == true)
+        if (player1Script.active)
         {
             if (resetLerp)
             {
