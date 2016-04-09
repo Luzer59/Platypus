@@ -137,6 +137,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 454084, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
   m_IsPrefabParent: 0
@@ -195,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: 2d1068c332277db449f03c7a940e3c91, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.1544118, g: 0.7200814, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &1152474432
@@ -399,7 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apache: {fileID: 171748, guid: b40c761e735e80a4ebd3fc6f5a8babb9, type: 2}
-  apacheCount: 5
+  apacheCount: 50
   levelTypes:
   - {fileID: 21300000, guid: 2d1068c332277db449f03c7a940e3c91, type: 3}
   - {fileID: 21300000, guid: c75c1e964bd22814a9f6ddec0505b5e2, type: 3}

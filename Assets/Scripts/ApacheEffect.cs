@@ -23,7 +23,8 @@ public class ApacheEffect : MonoBehaviour
     Color fadeStartValue;
     Color fadeEndValue;
 
-    public float apacheMinHeight = 0.6f;
+    public float apacheMaxHeight = 3.5f;
+    public float apacheMinHeight = -3.5f;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class ApacheEffect : MonoBehaviour
 
         SetLevelType();
         SpawnApaches();
-        SetApacheSprites();           
+        SetApacheSprites();       
     }
 
     void Update()
@@ -107,10 +108,26 @@ public class ApacheEffect : MonoBehaviour
     }
     void SpawnApaches()
     {
+        float spawnAreaPartX = apacheCount / 22;
+        float spawnPosMinX = -11;
+        float spawnPosMaxX = -11 + spawnAreaPartX;
+
+        float spawnPosMinY = apacheMinHeight;
+        float spawnPosMaxY = 8;
+
         for (int i = 0; i < apacheCount; i++)
         {
             GameObject instance = (GameObject)Instantiate(apache, new Vector3(0, 0, 0), Quaternion.identity);
-            apacheList.Add(instance);            
+            apacheList.Add(instance);
+
+            float spawnPosX = Random.Range(spawnPosMinX, spawnPosMaxX);
+            float spawnPosY = Random.Range(spawnPosMinY, spawnPosMaxY);
+            instance.transform.position = new Vector3(spawnPosX, spawnPosY, 0);
+
+            spawnPosMinX += spawnAreaPartX;
+            spawnPosMaxX += spawnAreaPartX;
+
+            instance.GetComponent<ApacheMover>().SetValues(Random.Range(5, 20));
         }
     }
     void SetApacheSprites()
