@@ -72,7 +72,6 @@ public class Player2 : PlayerBase
 
         Vector2 currentPos = Vector2.Lerp(startPos, endPos, position);
         transform.position = new Vector3(currentPos.x, currentPos.y, 0f);
-        transform.Rotate(Vector3.forward, 10);
     }
 
     IEnumerator AttackTimer()
