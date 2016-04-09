@@ -95,8 +95,8 @@ GameObject:
   - 4: {fileID: 173871763}
   - 114: {fileID: 173871762}
   m_Layer: 0
-  m_Name: Defender
-  m_TagString: Defender
+  m_Name: Player2
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,48 +249,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &550810610
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 465890, guid: 82d7dfeb0ea464844946e43186b3c11b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 465890, guid: 82d7dfeb0ea464844946e43186b3c11b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 465890, guid: 82d7dfeb0ea464844946e43186b3c11b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 465890, guid: 82d7dfeb0ea464844946e43186b3c11b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 465890, guid: 82d7dfeb0ea464844946e43186b3c11b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 465890, guid: 82d7dfeb0ea464844946e43186b3c11b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 465890, guid: 82d7dfeb0ea464844946e43186b3c11b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 465890, guid: 82d7dfeb0ea464844946e43186b3c11b, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 82d7dfeb0ea464844946e43186b3c11b, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &722914943
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +288,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1269832166
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,8 +385,8 @@ GameObject:
   - 4: {fileID: 1482908920}
   - 114: {fileID: 1482908921}
   m_Layer: 0
-  m_Name: Attacker
-  m_TagString: Attacker
+  m_Name: Player1
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

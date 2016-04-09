@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Attacker : Player
+public class Player1 : PlayerBase
 {
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         Reset();
     }
 
@@ -18,14 +19,14 @@ public class Attacker : Player
     {
         if (currentLife <= 0)
         {
-            GameController.instance.attackerAlive = false;
+            gameController.player1Alive = false;
         }
     }
 
     public override void Reset()
     {
         currentLife = maxLife;
-        GameController.instance.attackerAlive = true;
+        gameController.player1Alive = true;
         position = 0f;
     }
 }

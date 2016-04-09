@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Player : MonoBehaviour
+public abstract class PlayerBase : MonoBehaviour
 {
     public float position;
     public Vector2 startPos;
@@ -13,11 +13,17 @@ public abstract class Player : MonoBehaviour
     public bool active;
 
     protected int currentLife;
+    protected GameController gameController;
 
     public int Life
     {
         get { return currentLife; }
         set { currentLife = value; }
+    }
+
+    protected virtual void Start()
+    {
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     protected void SetActiveStatus()

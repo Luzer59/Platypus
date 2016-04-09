@@ -21,10 +21,10 @@ public class GameController : MonoBehaviour
     }
     #endregion
 
-    public Attacker attacker;
-    public Defender defender;
-    public bool attackerAlive = true;
-    public bool defenderAlive = true;
+    public Player1 player1;
+    public Player2 player2;
+    public bool player1Alive = true;
+    public bool player2Alive = true;
 
     void Awake()
     {
@@ -33,8 +33,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        attacker = GameObject.FindGameObjectWithTag("Attacker").GetComponent<Attacker>();
-        defender = GameObject.FindGameObjectWithTag("Defender").GetComponent<Defender>();
+        player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player1>();
+        player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player2>();
     }
 
     void Update()
@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour
 
     void CheckPlayers()
     {
-        if (attacker.active && defender.active)
+        if (player1.active && player2.active)
         {
             print("defender win");
             StartNewGame();
@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
 
     public void StartNewGame()
     {
-        attacker.Reset();
-        defender.Reset();
+        player1.Reset();
+        player2.Reset();
     }
 }

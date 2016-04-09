@@ -4,7 +4,7 @@ using System.Collections;
 public class ApacheEffect : MonoBehaviour
 {
 
-    Player player1Script;
+    PlayerBase player1Script;
 
     public SpriteRenderer background;
     float lerpTime = 0.2f;
@@ -17,7 +17,7 @@ public class ApacheEffect : MonoBehaviour
 
     void Start()
     {
-        player1Script = GameObject.Find("Player1").GetComponent<Player>();
+        player1Script = GameObject.Find("Player1").GetComponent<PlayerBase>();
     }
 
     void Update()
