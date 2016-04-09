@@ -48,7 +48,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   uiShake: {fileID: 0}
   shakeCondition: 1
-  gameState: 1
+  gameState: 0
+  startGameDelay: 2
   endGameDelay: 2
 --- !u!1001 &100100000
 Prefab:

@@ -127,11 +127,11 @@ public class GameController : MonoBehaviour
 
     void CheckEndConditions()
     {
-        if (player1.active && !player2.active)
+        if (player1.active)
         {
             player1.currentLife += player1.healthGain * Time.deltaTime;
         }
-        if (!player1.active)
+        else
         {
             player1.currentLife -= player1.healthLoss * Time.deltaTime;
         }
@@ -139,10 +139,18 @@ public class GameController : MonoBehaviour
         {
             player2.currentLife = 0f;
         }
+        if (player1.currentLife > player1.maxLife)
+        {
+            player1.currentLife = player1.maxLife;
+        }
         if (player1.currentLife <= 0)
         {
-            player1.currentLife = 0;
+            player1.currentLife = 0f;
             player1Alive = false;
+        }
+        if (player2.currentLife > player2.maxLife)
+        {
+            player2.currentLife = player2.maxLife;
         }
         if (player2.currentLife <= 0)
         {
@@ -163,7 +171,7 @@ public class GameController : MonoBehaviour
     {
         if (player1.active)
         {
-            player1.currentLife = 0f;
+            player1.currentLife -= 6969f;
         }
         else
         {

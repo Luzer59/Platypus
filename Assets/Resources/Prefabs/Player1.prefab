@@ -154,7 +154,7 @@ MonoBehaviour:
   active: 0
   isMoving: 0
   actionSound: {fileID: 0}
-  healthGain: 15
+  healthGain: 60
   healthLoss: 20
 --- !u!212 &21257952
 SpriteRenderer:
