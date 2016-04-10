@@ -1,0 +1,314 @@
+fileFormatVersion: 2
+guid: 3e79985dd050ea6458b74561ca7a03fd
+timeCreated: 1460294365
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Auditorio_pc_anim_0
+    21300002: Auditorio_pc_anim_1
+    21300004: Auditorio_pc_anim_2
+    21300006: Auditorio_pc_anim_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Auditorio_pc_anim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: -181}
+        - {x: 11, y: -175}
+        - {x: 14, y: -167}
+        - {x: 12, y: -133}
+        - {x: -3, y: -67}
+        - {x: 6, y: -57}
+        - {x: 17, y: -35}
+        - {x: 19, y: -29}
+        - {x: 19, y: 1}
+        - {x: 17, y: 16}
+        - {x: 11, y: 25}
+        - {x: -6, y: 39}
+        - {x: -23, y: 42}
+        - {x: -36, y: 119}
+        - {x: -46, y: 178}
+        - {x: -52, y: 186}
+        - {x: -67, y: 193}
+        - {x: -81, y: 193}
+        - {x: -99, y: 175}
+        - {x: -212, y: 175}
+        - {x: -256, y: 174}
+        - {x: -256, y: -244}
+        - {x: -60, y: -244}
+        - {x: -5, y: -243}
+        - {x: 2, y: -235}
+        - {x: 1, y: -201}
+      - - {x: 250, y: 193}
+        - {x: 213, y: 2}
+        - {x: 160, y: 4}
+        - {x: 152, y: -1}
+        - {x: 135, y: 6}
+        - {x: 109, y: 2}
+        - {x: 103, y: -4}
+        - {x: 98, y: -28}
+        - {x: 98, y: -49}
+        - {x: 114, y: -54}
+        - {x: 119, y: -43}
+        - {x: 133, y: -51}
+        - {x: 205, y: -51}
+        - {x: 230, y: -53}
+        - {x: 249, y: -51}
+        - {x: 249, y: -238}
+        - {x: 253, y: -242}
+        - {x: 256, y: -242}
+        - {x: 256, y: 195}
+        - {x: 254, y: 195}
+    - name: Auditorio_pc_anim_1
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: -131}
+        - {x: -16, y: -118}
+        - {x: -21, y: -96}
+        - {x: -19, y: -26}
+        - {x: -10, y: -6}
+        - {x: -12, y: 17}
+        - {x: -15, y: 27}
+        - {x: -30, y: 44}
+        - {x: -53, y: 58}
+        - {x: -14, y: 55}
+        - {x: -8, y: 60}
+        - {x: -8, y: 71}
+        - {x: -12, y: 82}
+        - {x: -29, y: 97}
+        - {x: -66, y: 138}
+        - {x: -55, y: 138}
+        - {x: -46, y: 155}
+        - {x: -75, y: 180}
+        - {x: -95, y: 195}
+        - {x: -111, y: 195}
+        - {x: -135, y: 184}
+        - {x: -138, y: 182}
+        - {x: -152, y: 180}
+        - {x: -156, y: 178}
+        - {x: -177, y: 168}
+        - {x: -207, y: 183}
+        - {x: -247, y: 195}
+        - {x: -256, y: 195}
+        - {x: -256, y: -243}
+        - {x: -126, y: -244}
+        - {x: -47, y: -242}
+        - {x: -36, y: -245}
+        - {x: -20, y: -245}
+        - {x: -13, y: -228}
+        - {x: -31, y: -167}
+        - {x: -20, y: -152}
+      - - {x: 235, y: 173}
+        - {x: 188, y: 12}
+        - {x: 188, y: -50}
+        - {x: 216, y: -70}
+        - {x: 234, y: -241}
+        - {x: 256, y: -241}
+        - {x: 256, y: 173}
+    - name: Auditorio_pc_anim_2
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: -186}
+        - {x: 21, y: -180}
+        - {x: 25, y: -166}
+        - {x: 30, y: -144}
+        - {x: 31, y: -133}
+        - {x: 48, y: -25}
+        - {x: 59, y: -20}
+        - {x: 89, y: -4}
+        - {x: 99, y: 7}
+        - {x: 101, y: 12}
+        - {x: 101, y: 22}
+        - {x: 98, y: 30}
+        - {x: 82, y: 50}
+        - {x: 62, y: 60}
+        - {x: 62, y: 62}
+        - {x: 95, y: 61}
+        - {x: 101, y: 69}
+        - {x: 104, y: 74}
+        - {x: 104, y: 80}
+        - {x: 103, y: 83}
+        - {x: 98, y: 87}
+        - {x: 89, y: 87}
+        - {x: 96, y: 97}
+        - {x: 96, y: 111}
+        - {x: 94, y: 115}
+        - {x: 79, y: 118}
+        - {x: 71, y: 115}
+        - {x: 72, y: 126}
+        - {x: 81, y: 126}
+        - {x: 89, y: 131}
+        - {x: 90, y: 148}
+        - {x: 82, y: 152}
+        - {x: 78, y: 153}
+        - {x: 74, y: 177}
+        - {x: 67, y: 185}
+        - {x: 52, y: 188}
+        - {x: 38, y: 188}
+        - {x: 18, y: 176}
+        - {x: 10, y: 173}
+        - {x: 10, y: 172}
+        - {x: -47, y: 172}
+        - {x: -47, y: 174}
+        - {x: -71, y: 174}
+        - {x: -256, y: 173}
+        - {x: -256, y: -241}
+        - {x: -28, y: -241}
+        - {x: -27, y: -242}
+        - {x: -8, y: -242}
+        - {x: -2, y: -235}
+        - {x: 2, y: -186}
+      - - {x: 249, y: 154}
+        - {x: 249, y: -238}
+        - {x: 253, y: -242}
+        - {x: 256, y: -242}
+        - {x: 256, y: 158}
+        - {x: 253, y: 158}
+    - name: Auditorio_pc_anim_3
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 157, y: -213}
+        - {x: 157, y: -206}
+        - {x: 155, y: -194}
+        - {x: 153, y: -189}
+        - {x: 156, y: -186}
+        - {x: 160, y: -180}
+        - {x: 168, y: -170}
+        - {x: 168, y: -163}
+        - {x: 164, y: -137}
+        - {x: 162, y: -126}
+        - {x: 160, y: -120}
+        - {x: 159, y: -106}
+        - {x: 157, y: -94}
+        - {x: 149, y: -52}
+        - {x: 148, y: -38}
+        - {x: 146, y: -26}
+        - {x: 144, y: -21}
+        - {x: 141, y: -2}
+        - {x: 144, y: 4}
+        - {x: 155, y: 12}
+        - {x: 158, y: 25}
+        - {x: 157, y: 38}
+        - {x: 156, y: 41}
+        - {x: 148, y: 50}
+        - {x: 137, y: 53}
+        - {x: 132, y: 51}
+        - {x: 131, y: 58}
+        - {x: 173, y: 58}
+        - {x: 179, y: 67}
+        - {x: 181, y: 67}
+        - {x: 193, y: 66}
+        - {x: 198, y: 68}
+        - {x: 202, y: 73}
+        - {x: 202, y: 90}
+        - {x: 201, y: 110}
+        - {x: 195, y: 116}
+        - {x: 189, y: 117}
+        - {x: 182, y: 117}
+        - {x: 176, y: 110}
+        - {x: 123, y: 109}
+        - {x: 119, y: 132}
+        - {x: 145, y: 132}
+        - {x: 147, y: 131}
+        - {x: 151, y: 132}
+        - {x: 156, y: 136}
+        - {x: 159, y: 138}
+        - {x: 157, y: 152}
+        - {x: 151, y: 159}
+        - {x: 148, y: 160}
+        - {x: 110, y: 160}
+        - {x: 108, y: 163}
+        - {x: 98, y: 173}
+        - {x: 90, y: 178}
+        - {x: 79, y: 178}
+        - {x: 62, y: 165}
+        - {x: 54, y: 158}
+        - {x: 25, y: 158}
+        - {x: 24, y: 159}
+        - {x: -256, y: 159}
+        - {x: -256, y: -242}
+        - {x: 152, y: -242}
+        - {x: 159, y: -239}
+        - {x: 161, y: -232}
+        - {x: 160, y: -226}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

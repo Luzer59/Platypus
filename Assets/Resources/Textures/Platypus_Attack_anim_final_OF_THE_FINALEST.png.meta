@@ -1,0 +1,315 @@
+fileFormatVersion: 2
+guid: aeb24854254f8d2439c806cb700e56cd
+timeCreated: 1460294224
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Platypus_Attack_anim_final_OF_THE_FINALEST_0
+    21300002: Platypus_Attack_anim_final_OF_THE_FINALEST_1
+    21300004: Platypus_Attack_anim_final_OF_THE_FINALEST_2
+    21300006: Platypus_Attack_anim_final_OF_THE_FINALEST_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Platypus_Attack_anim_final_OF_THE_FINALEST_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -156}
+        - {x: 8, y: -145}
+        - {x: 29, y: -102}
+        - {x: 68, y: -98}
+        - {x: 107, y: -108}
+        - {x: 138, y: -73}
+        - {x: 146, y: -64}
+        - {x: 147, y: -60}
+        - {x: 147, y: -44}
+        - {x: 129, y: -22}
+        - {x: 113, y: -19}
+        - {x: 43, y: -24}
+        - {x: -3, y: 3}
+        - {x: -35, y: 16}
+        - {x: -75, y: 16}
+        - {x: -101, y: 11}
+        - {x: -145, y: -13}
+        - {x: -201, y: -70}
+        - {x: -241, y: -141}
+        - {x: -251, y: -176}
+        - {x: -256, y: -208}
+        - {x: -256, y: -256}
+        - {x: -31, y: -256}
+        - {x: -30, y: -255}
+        - {x: 29, y: -243}
+        - {x: 43, y: -214}
+      - - {x: 24, y: -151}
+        - {x: 27, y: -151}
+        - {x: 32, y: -149}
+        - {x: 32, y: -145}
+        - {x: 29, y: -144}
+        - {x: 23, y: -148}
+    - name: Platypus_Attack_anim_final_OF_THE_FINALEST_1
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: -200}
+        - {x: 45, y: -167}
+        - {x: 35, y: -154}
+        - {x: 32, y: -119}
+        - {x: 81, y: -139}
+        - {x: 93, y: -147}
+        - {x: 113, y: -154}
+        - {x: 119, y: -151}
+        - {x: 126, y: -141}
+        - {x: 126, y: -125}
+        - {x: 101, y: -100}
+        - {x: 76, y: -55}
+        - {x: 74, y: -39}
+        - {x: 82, y: -15}
+        - {x: 84, y: 17}
+        - {x: 83, y: 28}
+        - {x: 47, y: 88}
+        - {x: 26, y: 100}
+        - {x: -12, y: 112}
+        - {x: -36, y: 112}
+        - {x: -37, y: 98}
+        - {x: -70, y: 99}
+        - {x: -84, y: 84}
+        - {x: -127, y: 68}
+        - {x: -160, y: 41}
+        - {x: -173, y: 18}
+        - {x: -192, y: 4}
+        - {x: -207, y: -19}
+        - {x: -229, y: -70}
+        - {x: -239, y: -128}
+        - {x: -251, y: -185}
+        - {x: -254, y: -232}
+        - {x: -254, y: -256}
+        - {x: 33, y: -256}
+        - {x: 43, y: -252}
+        - {x: 57, y: -255}
+        - {x: 67, y: -245}
+      - - {x: 251, y: -224}
+        - {x: 250, y: -243}
+        - {x: 250, y: -256}
+        - {x: 256, y: -256}
+        - {x: 256, y: -224}
+    - name: Platypus_Attack_anim_final_OF_THE_FINALEST_2
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 92, y: -171}
+        - {x: 94, y: -150}
+        - {x: 104, y: -128}
+        - {x: 105, y: -115}
+        - {x: 105, y: -96}
+        - {x: 110, y: -82}
+        - {x: 143, y: -88}
+        - {x: 167, y: -79}
+        - {x: 187, y: -54}
+        - {x: 187, y: -38}
+        - {x: 184, y: -7}
+        - {x: 174, y: 23}
+        - {x: 167, y: 43}
+        - {x: 176, y: 64}
+        - {x: 175, y: 94}
+        - {x: 158, y: 126}
+        - {x: 140, y: 135}
+        - {x: 136, y: 152}
+        - {x: 129, y: 160}
+        - {x: 109, y: 168}
+        - {x: 142, y: 168}
+        - {x: 155, y: 181}
+        - {x: 156, y: 196}
+        - {x: 143, y: 218}
+        - {x: 133, y: 219}
+        - {x: 93, y: 216}
+        - {x: 80, y: 225}
+        - {x: 60, y: 237}
+        - {x: 30, y: 238}
+        - {x: 7, y: 231}
+        - {x: -10, y: 214}
+        - {x: -30, y: 203}
+        - {x: -37, y: 190}
+        - {x: -69, y: 230}
+        - {x: -78, y: 240}
+        - {x: -122, y: 253}
+        - {x: -147, y: 253}
+        - {x: -154, y: 251}
+        - {x: -154, y: 242}
+        - {x: -147, y: 232}
+        - {x: -106, y: 202}
+        - {x: -105, y: 177}
+        - {x: -101, y: 164}
+        - {x: -155, y: 178}
+        - {x: -193, y: 182}
+        - {x: -233, y: 180}
+        - {x: -237, y: 165}
+        - {x: -232, y: 161}
+        - {x: -179, y: 148}
+        - {x: -219, y: 124}
+        - {x: -229, y: 113}
+        - {x: -237, y: 103}
+        - {x: -236, y: 41}
+        - {x: -248, y: -7}
+        - {x: -250, y: -40}
+        - {x: -236, y: -64}
+        - {x: -223, y: -73}
+        - {x: -207, y: -73}
+        - {x: -190, y: -85}
+        - {x: -201, y: -103}
+        - {x: -228, y: -145}
+        - {x: -241, y: -168}
+        - {x: -248, y: -184}
+        - {x: -256, y: -207}
+        - {x: -256, y: -256}
+        - {x: 111, y: -256}
+        - {x: 110, y: -244}
+        - {x: 105, y: -230}
+        - {x: 97, y: -188}
+    - name: Platypus_Attack_anim_final_OF_THE_FINALEST_3
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 128, y: -62}
+        - {x: 123, y: -52}
+        - {x: 104, y: -32}
+        - {x: 122, y: -28}
+        - {x: 151, y: -20}
+        - {x: 180, y: -37}
+        - {x: 230, y: -30}
+        - {x: 246, y: -16}
+        - {x: 248, y: -10}
+        - {x: 248, y: -1}
+        - {x: 239, y: 18}
+        - {x: 208, y: 29}
+        - {x: 214, y: 54}
+        - {x: 225, y: 77}
+        - {x: 191, y: 90}
+        - {x: 177, y: 88}
+        - {x: 169, y: 66}
+        - {x: 152, y: 61}
+        - {x: 139, y: 95}
+        - {x: 111, y: 115}
+        - {x: 93, y: 126}
+        - {x: 77, y: 154}
+        - {x: 36, y: 181}
+        - {x: 29, y: 174}
+        - {x: -3, y: 212}
+        - {x: -25, y: 233}
+        - {x: -71, y: 251}
+        - {x: -87, y: 251}
+        - {x: -92, y: 238}
+        - {x: -74, y: 197}
+        - {x: -80, y: 186}
+        - {x: -84, y: 175}
+        - {x: -110, y: 177}
+        - {x: -165, y: 200}
+        - {x: -183, y: 197}
+        - {x: -175, y: 170}
+        - {x: -151, y: 150}
+        - {x: -79, y: 125}
+        - {x: -90, y: 115}
+        - {x: -104, y: 96}
+        - {x: -101, y: 84}
+        - {x: -126, y: 69}
+        - {x: -160, y: 61}
+        - {x: -181, y: 69}
+        - {x: -216, y: 74}
+        - {x: -243, y: 28}
+        - {x: -246, y: 12}
+        - {x: -240, y: -36}
+        - {x: -223, y: -78}
+        - {x: -225, y: -109}
+        - {x: -220, y: -128}
+        - {x: -225, y: -145}
+        - {x: -247, y: -193}
+        - {x: -248, y: -224}
+        - {x: -248, y: -256}
+        - {x: 128, y: -256}
+        - {x: 128, y: -242}
+        - {x: 123, y: -175}
+        - {x: 130, y: -135}
+      - - {x: -89, y: 206}
+        - {x: -94, y: 202}
+        - {x: -94, y: 188}
+        - {x: -89, y: 186}
+        - {x: -79, y: 186}
+        - {x: -77, y: 190}
+        - {x: -77, y: 203}
+        - {x: -84, y: 206}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
