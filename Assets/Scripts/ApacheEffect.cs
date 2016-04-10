@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ApacheEffect : MonoBehaviour
 {
     Player1 player1Script;
+    Player2 player2Script;
     GameController gc;
 
     public GameObject apache;
@@ -36,6 +37,7 @@ public class ApacheEffect : MonoBehaviour
     void Awake()
     {
         player1Script = GameObject.Find("Player1").GetComponent<Player1>();
+        player2Script = GameObject.Find("Player2").GetComponent<Player2>();
         gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         background = GameObject.FindGameObjectWithTag("Background").GetComponent<SpriteRenderer>();
         backBackground = GameObject.FindGameObjectWithTag("BackBackground").GetComponent<SpriteRenderer>();     
@@ -51,7 +53,7 @@ public class ApacheEffect : MonoBehaviour
     }
     void FadeBackground()
     {
-        if (player1Script.active)
+        if (player1Script.active || player2Script.active)
         {
             if (resetLerp)
             {
