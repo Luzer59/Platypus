@@ -16,6 +16,7 @@ public class ApacheEffect : MonoBehaviour
     public int speedlineCount;
 
     public List<Sprite> levelTypes = new List<Sprite>();
+    public List<Sprite> levelBackTypes = new List<Sprite>();
     public List<Sprite> apacheTypes = new List<Sprite>();
 
     int currentLevelType = 0;
@@ -108,7 +109,7 @@ public class ApacheEffect : MonoBehaviour
             currentLevelType = Random.Range(0, levelTypes.Count);
             newLevelBack = levelTypes[currentLevelType];
             background.sprite = newLevelBack;
-            backBackground.sprite = newLevelBack;
+            backBackground.sprite = levelBackTypes[currentLevelType];
         }
     }
     void SpawnApaches()
@@ -146,13 +147,16 @@ public class ApacheEffect : MonoBehaviour
             switch (currentLevelType)
             {
                 case 0:
-                    apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(0, 2)];
+                    apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(0, 3)];
                     break;
                 case 1:
-                    apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(1, 3)];
+                    apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(3, 5)];
                     break;
                 case 2:
-                    apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(2, 4)];
+                    apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(5, 7)];
+                    break;
+                case 3:
+                    apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(7, 9)];
                     break;
                 default:
                     apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(0, 1)];

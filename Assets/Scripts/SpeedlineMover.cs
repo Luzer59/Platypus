@@ -35,7 +35,7 @@ public class SpeedlineMover : MonoBehaviour {
     {
         this.sr.sortingOrder = order - 100;
         this.speed = order * speedModifier;
-        transform.localScale = new Vector3(order * scaleModifier * 2, order * scaleModifier, 1);
+        transform.localScale = new Vector3(order * scaleModifier * 4, order * scaleModifier, 1);
     }
 }
 

@@ -22,11 +22,6 @@ public class Confetti : MonoBehaviour {
 	
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SpawnConfetti();   
-        }
-
         if (gc.gameState == GameState.GameEnd)
         {
             if (gc.player1won)

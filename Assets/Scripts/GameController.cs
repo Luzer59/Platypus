@@ -61,6 +61,10 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.LoadLevel(0);
+        }
         if (gameState != GameState.Menu)
         {
             if (Input.GetKeyDown(KeyCode.Escape))

@@ -52,6 +52,9 @@ MonoBehaviour:
   gameState: 0
   startGameDelay: 2
   endGameDelay: 2
+  player1won: 0
+  player2won: 0
+  confettiShot: 0
 --- !u!114 &11456846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,14 +71,25 @@ MonoBehaviour:
   speedline: {fileID: 122222, guid: 238554c37bb0b424aadd759cec5240cb, type: 2}
   speedlineCount: 50
   levelTypes:
-  - {fileID: 21300000, guid: 2d1068c332277db449f03c7a940e3c91, type: 3}
-  - {fileID: 21300000, guid: c75c1e964bd22814a9f6ddec0505b5e2, type: 3}
-  - {fileID: 21300000, guid: cc4b14d172540684ab86b1e39c4f17ff, type: 3}
+  - {fileID: 21300000, guid: b53563fc92a30e840bb42013e94db798, type: 3}
+  - {fileID: 21300000, guid: f8cff1b1db0c0fb408ba2d3a1b77c519, type: 3}
+  - {fileID: 21300000, guid: 0935a925d1a0c6c4fb15173713e357cb, type: 3}
+  - {fileID: 21300000, guid: 5f34f8bffd8e2e34cb12e6241082ff6d, type: 3}
+  levelBackTypes:
+  - {fileID: 21300000, guid: 7ae99a5929ecd224ea9cd52e87e89daf, type: 3}
+  - {fileID: 21300000, guid: 964f859cb6630ba4b9021d49fe1c1b6d, type: 3}
+  - {fileID: 21300000, guid: cf2c87cb1c06c2b40b99181ae553d209, type: 3}
+  - {fileID: 21300000, guid: 1664dc26cbff6d146ac906366d7b59de, type: 3}
   apacheTypes:
-  - {fileID: 21300000, guid: f73ef0da763211247a5a91aef6630644, type: 3}
-  - {fileID: 21300000, guid: 364378902f4af3a47b229b42cc9a28fb, type: 3}
-  - {fileID: 21300000, guid: 54e5d26a2926f4e46952a0b86160d90f, type: 3}
-  - {fileID: 21300000, guid: fd627038888dacc4bbb424d311f912f9, type: 3}
+  - {fileID: 21300000, guid: 7663cc1252224b04585e9575f815d973, type: 3}
+  - {fileID: 21300000, guid: dd5b468912da95d449b31629fabaa67e, type: 3}
+  - {fileID: 21300000, guid: 522da4bf944fc144dbef3fe961803149, type: 3}
+  - {fileID: 21300000, guid: 0028d4187e30eac428b5d90c7acf71a5, type: 3}
+  - {fileID: 21300002, guid: 0028d4187e30eac428b5d90c7acf71a5, type: 3}
+  - {fileID: 21300000, guid: 512d3d5b454f6bb469f1ca584f9b5c0c, type: 3}
+  - {fileID: 21300000, guid: 1189c14a22f4740448bdaae311a4d8f8, type: 3}
+  - {fileID: 21300000, guid: e6b58a940e5be8a4e95f922db0cac039, type: 3}
+  - {fileID: 21300000, guid: cf966cd3a3f4dd94f8103cf4406a67fc, type: 3}
   apacheMaxHeight: 3.5
   apacheMinHeight: -3.5
 --- !u!1001 &100100000
