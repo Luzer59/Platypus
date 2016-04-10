@@ -43,6 +43,10 @@ public class GameController : MonoBehaviour
     public int currentSpriteSet;
     public int spritesetCount;
     public AudioClip winSound;
+    public AudioClip dominatingSound;
+    public AudioClip destroyedSound;
+    public AudioClip godlikeSound;
+    public AudioClip getReadySound;
 
     private GameState savedState;
     private ApacheEffect apacheEffect;
@@ -239,6 +243,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator StartGame()
     {
+        PlayGetReadySound();
         SetNewSpritesets();
         OnGameStart();
         yield return new WaitForSeconds(startGameDelay);
@@ -247,7 +252,24 @@ public class GameController : MonoBehaviour
 
     IEnumerator EndGame()
     {
-        PlayWinSound();
+        int largestStreak = player1Streak > player2Streak ? player1Streak : player2Streak;
+        if (largestStreak == 4)
+        {
+            PlayDominatingSound();
+        }
+        else if (largestStreak == 6)
+        {
+            PlayDestroyedSound();
+        }
+        else if (largestStreak == 9)
+        {
+            PlayGodlikeSound();
+        }
+        else
+        {
+            PlayWinSound();
+        }
+        
         OnGameEnd();
         gameState = GameState.GameEnd;
         if(player1Alive)
@@ -279,5 +301,25 @@ public class GameController : MonoBehaviour
     void PlayWinSound()
     {
         audio.PlayOneShot(winSound);
+    }
+
+    void PlayGetReadySound()
+    {
+        audio.PlayOneShot(getReadySound);
+    }
+
+    void PlayDestroyedSound()
+    {
+        audio.PlayOneShot(destroyedSound);
+    }
+
+    void PlayGodlikeSound()
+    {
+        audio.PlayOneShot(godlikeSound);
+    }
+
+    void PlayDominatingSound()
+    {
+        audio.PlayOneShot(dominatingSound);
     }
 }
