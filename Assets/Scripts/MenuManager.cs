@@ -6,6 +6,7 @@ public class MenuManager : MonoBehaviour
     public ParticleSystem[] part;
     public float confettiDelay;
     public AudioClip[] soundEffects;
+    public AudioClip[] menuButtonSound;
 
     private int partIndex = 0;
     private AudioSource audio;
@@ -61,6 +62,11 @@ public class MenuManager : MonoBehaviour
     public void PlayAudioEffect(int index)
     {
         audio.PlayOneShot(soundEffects[index]);
+    }
+
+    public void PlayMenuButtonEffect()
+    {
+        audio.PlayOneShot(menuButtonSound[Random.Range(0, menuButtonSound.Length)]);
     }
 }
 

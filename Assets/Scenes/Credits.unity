@@ -604,6 +604,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1041813067}
+          m_MethodName: PlayMenuButtonEffect
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
@@ -741,6 +752,10 @@ Prefab:
       propertyPath: soundEffects.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11456606, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
+      propertyPath: menuButtonSound.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 459632, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 396
@@ -781,6 +796,18 @@ Prefab:
       propertyPath: m_Volume
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 11456606, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
+      propertyPath: menuButtonSound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c393c6a8afaec624887e2cccecf422ad, type: 3}
+    - target: {fileID: 11456606, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
+      propertyPath: menuButtonSound.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 89b87213b85ebea46969e6e176e79690, type: 3}
+    - target: {fileID: 11456606, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
+      propertyPath: menuButtonSound.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 171a209d6bebb7a41bb79abbdc7968cf, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
   m_IsPrefabParent: 0
