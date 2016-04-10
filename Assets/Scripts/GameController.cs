@@ -47,10 +47,12 @@ public class GameController : MonoBehaviour
     public AudioClip destroyedSound;
     public AudioClip godlikeSound;
     public AudioClip getReadySound;
+    public AudioClip getRektSound;
 
     private GameState savedState;
     private ApacheEffect apacheEffect;
     private AudioSource audio;
+    private bool fastMusicActive = false;
 
     //confetti shoot stuff
     public bool player1won = false;
@@ -114,6 +116,7 @@ public class GameController : MonoBehaviour
         player1won = false;
         player2won = false;
         confettiShot = false;
+        bgmSlow.Play();
     }
 
     void TimerCountdown()
@@ -123,17 +126,18 @@ public class GameController : MonoBehaviour
 
     void AudioSystem()
     {
-        if (player1.active || player2.active)
+        if ((player1.active || player2.active) && !fastMusicActive)
         {
-            bgmFast.volume = 0.3f;
-            bgmSlow.volume = 0f;
+            bgmFast.Play();
+            bgmSlow.Stop();
+            fastMusicActive = true;
         }
-        else
+        else if ((!player1.active && !player2.active) && fastMusicActive)
         {
-            bgmFast.volume = 0f;
-            bgmSlow.volume = 0.3f;
+            bgmFast.Stop();
+            bgmSlow.Play();
+            fastMusicActive = false;
         }
-        
     }
 
     void ShakeCheck()
@@ -305,7 +309,16 @@ public class GameController : MonoBehaviour
 
     void PlayGetReadySound()
     {
-        audio.PlayOneShot(getReadySound);
+        int largestStreak = player1Streak > player2Streak ? player1Streak : player2Streak;
+        if (largestStreak < 5)
+        {
+            audio.PlayOneShot(getReadySound);
+        }
+        else
+        {
+            audio.PlayOneShot(getRektSound);
+        }
+        
     }
 
     void PlayDestroyedSound()

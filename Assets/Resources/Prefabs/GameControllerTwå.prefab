@@ -97,9 +97,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0
+  m_audioClip: {fileID: 8300000, guid: d6ab721e8f1796a42aa0ce2199c93351, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -245,8 +245,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 204b09ba61e68ae4babf48aeb4e2390d, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
@@ -340,10 +340,11 @@ MonoBehaviour:
   currentSpriteSet: 0
   spritesetCount: 5
   winSound: {fileID: 8300000, guid: a6193620d39d4ee4681188e42d1bd39d, type: 3}
-  dominatingSound: {fileID: 0}
-  destroyedSound: {fileID: 0}
-  godlikeSound: {fileID: 0}
-  getReadySound: {fileID: 0}
+  dominatingSound: {fileID: 8300000, guid: 2a177d76b5b1297429ec2e685a9dc1c6, type: 3}
+  destroyedSound: {fileID: 8300000, guid: f0390152631422c46bb0ed4a6a0d7aaf, type: 3}
+  godlikeSound: {fileID: 8300000, guid: b9e4f86cff4515c4daaae1d1a43ef677, type: 3}
+  getReadySound: {fileID: 8300000, guid: 3e2c4ca956599434a86e798606c2c8d3, type: 3}
+  getRektSound: {fileID: 8300000, guid: 0a6024a08c36cc649a120ae697306ba7, type: 3}
   player1won: 0
   player2won: 0
   confettiShot: 0
