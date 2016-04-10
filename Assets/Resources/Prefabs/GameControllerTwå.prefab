@@ -325,6 +325,8 @@ MonoBehaviour:
   player2: {fileID: 0}
   player1Alive: 1
   player2Alive: 1
+  player1Streak: 0
+  player2Streak: 0
   roundStartTime: 10
   roundTimer: 0
   cameraShake: {fileID: 0}
@@ -336,7 +338,7 @@ MonoBehaviour:
   bgmFast: {fileID: 8215548}
   bgmSlow: {fileID: 8249228}
   currentSpriteSet: 0
-  spritesetCount: 2
+  spritesetCount: 4
   winSound: {fileID: 8300000, guid: a6193620d39d4ee4681188e42d1bd39d, type: 3}
   player1won: 0
   player2won: 0
