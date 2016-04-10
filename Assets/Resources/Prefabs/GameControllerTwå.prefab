@@ -338,8 +338,12 @@ MonoBehaviour:
   bgmFast: {fileID: 8215548}
   bgmSlow: {fileID: 8249228}
   currentSpriteSet: 0
-  spritesetCount: 4
+  spritesetCount: 5
   winSound: {fileID: 8300000, guid: a6193620d39d4ee4681188e42d1bd39d, type: 3}
+  dominatingSound: {fileID: 0}
+  destroyedSound: {fileID: 0}
+  godlikeSound: {fileID: 0}
+  getReadySound: {fileID: 0}
   player1won: 0
   player2won: 0
   confettiShot: 0

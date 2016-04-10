@@ -142,23 +142,23 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: scale.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: order.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: endPos.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: sprites.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: startPos.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: spriteMove.Array.size
@@ -170,11 +170,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: activationSound.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: deactivationSound.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: sprites.Array.data[0].sprites.Array.size
@@ -191,6 +191,10 @@ Prefab:
     - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: sprites.Array.data[3].sprites.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[4].sprites.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: playerSound.Array.data[0].clip.Array.size
@@ -213,6 +217,10 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: activationSound.Array.data[4].clip.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: deactivationSound.Array.data[0].clip.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -226,6 +234,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: deactivationSound.Array.data[3].clip.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: deactivationSound.Array.data[4].clip.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 454084, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
@@ -519,7 +531,7 @@ Prefab:
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: deactivationSound.Array.data[3].clip.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 1dcce45e7b3af8d4ba56c641024560f3, type: 3}
+      objectReference: {fileID: 8300000, guid: e169da3eb2eee0f499e6c602eb107e04, type: 3}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: deactivationSound.Array.data[3].clip.Array.data[1]
       value: 
@@ -624,6 +636,71 @@ Prefab:
       propertyPath: order.Array.data[3]
       value: 501
       objectReference: {fileID: 0}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: deactivationSound.Array.data[4].clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1dcce45e7b3af8d4ba56c641024560f3, type: 3}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: deactivationSound.Array.data[4].clip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7849bfb8b2b0b2245b2fb889b7bfdb4a, type: 3}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: deactivationSound.Array.data[4].clip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ba52681d9e570f4ab5f971eef9ef3ab, type: 3}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: startPos.Array.data[4].x
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: startPos.Array.data[4].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: endPos.Array.data[4].x
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: endPos.Array.data[4].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: scale.Array.data[4]
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: order.Array.data[4]
+      value: 501
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[4].sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 28c0684e4405a974c8c6733322068a9a,
+        type: 3}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[4].sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300002, guid: 28c0684e4405a974c8c6733322068a9a,
+        type: 3}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[4].sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300004, guid: 28c0684e4405a974c8c6733322068a9a,
+        type: 3}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[4].sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300006, guid: 28c0684e4405a974c8c6733322068a9a,
+        type: 3}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: sprites.Array.data[4].sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300008, guid: dd490b27e37a6d14d8bb02b3f4633b1e,
+        type: 3}
+    - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: activationSound.Array.data[4].clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e169da3eb2eee0f499e6c602eb107e04, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
   m_IsPrefabParent: 0
@@ -666,13 +743,19 @@ MonoBehaviour:
     - {fileID: 21300004, guid: 558f4c50c37e5cb4bbce8699853ac3a4, type: 3}
     - {fileID: 21300006, guid: 558f4c50c37e5cb4bbce8699853ac3a4, type: 3}
     - {fileID: 21300008, guid: 558f4c50c37e5cb4bbce8699853ac3a4, type: 3}
+  - sprites:
+    - {fileID: 21300000, guid: e2081c3a2029c624faa852441519962e, type: 3}
+    - {fileID: 21300002, guid: e2081c3a2029c624faa852441519962e, type: 3}
+    - {fileID: 21300004, guid: e2081c3a2029c624faa852441519962e, type: 3}
+    - {fileID: 21300006, guid: e2081c3a2029c624faa852441519962e, type: 3}
   player: {fileID: 173871762}
   scale:
   - 0.4
   - 0.45
   - 1
   - 0.5
-  order: f5010000f4010000f5010000f4010000
+  - 0.65
+  order: f5010000f4010000f5010000f4010000f4010000
 --- !u!224 &586923205 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22438090, guid: 0ec93d1d078f002489cd47712c9ff4a8,
@@ -724,14 +807,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.32320502, g: 0.60548407, b: 0.7205882, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8f47ac642749b574099f130f50a3ab44, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2cf5d4da115d52448b66aa9535b63e5b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1167,11 +1250,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: endPos.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: startPos.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: spriteMove.Array.size
@@ -1183,11 +1266,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: activationSound.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: deactivationSound.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: playerSound.Array.data[0].clip.Array.size
@@ -1207,6 +1290,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: activationSound.Array.data[3].clip.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: activationSound.Array.data[4].clip.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 432804, guid: d083051c629114c4987bf53d552de591, type: 2}
@@ -1414,6 +1501,26 @@ Prefab:
       propertyPath: activationSound.Array.data[3].clip.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 9c75445b865a34747890aa71eb82ddd6, type: 3}
+    - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: startPos.Array.data[4].x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: startPos.Array.data[4].y
+      value: -1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: activationSound.Array.data[4].clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c75445b865a34747890aa71eb82ddd6, type: 3}
+    - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: endPos.Array.data[4].x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
+      propertyPath: endPos.Array.data[4].y
+      value: -1.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d083051c629114c4987bf53d552de591, type: 2}
   m_IsPrefabParent: 0
