@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class StartScreen : MonoBehaviour
 {
-    private Text text;
+    private Image image;
     new private Transform transform;
     private Vector3 originPos;
     private bool active = false;
@@ -13,7 +13,7 @@ public class StartScreen : MonoBehaviour
 
     void Start()
     {
-        text = GetComponent<Text>();
+        image = GetComponent<Image>();
         transform = GetComponent<RectTransform>();
         originPos = transform.position;
         GameController.instance.OnGameStart += OnGameStart;
@@ -36,9 +36,9 @@ public class StartScreen : MonoBehaviour
     IEnumerator Effect(float showDuration)
     {
         active = true;
-        text.enabled = true;
+        image.enabled = true;
         yield return new WaitForSeconds(showDuration);
-        text.enabled = false;
+        image.enabled = false;
         active = false;
     }
 }

@@ -4,18 +4,18 @@ using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour
 {
-    private Text text;
+    private Image image;
     new private Transform transform;
     private Vector3 originPos;
     private bool active = false;
 
     public float shakeIntensity;
-    public string player1WinText;
-    public string player2WinText;
+    public Sprite player1WinText;
+    public Sprite player2WinText;
 
     void Start()
     {
-        text = GetComponent<Text>();
+        image = GetComponent<Image>();
         transform = GetComponent<RectTransform>();
         originPos = transform.position;
         GameController.instance.OnGameEnd += OnGameEnd;
@@ -40,15 +40,15 @@ public class WinScreen : MonoBehaviour
         active = true;
         if (GameController.instance.player1Alive)
         {
-            text.text = player1WinText;
+            image.sprite = player1WinText;
         }
         else
         {
-            text.text = player2WinText;
+            image.sprite = player2WinText;
         }
-        text.enabled = true;
+        image.enabled = true;
         yield return new WaitForSeconds(showDuration);
-        text.enabled = false;
+        image.enabled = false;
         active = false;
     }
 }
