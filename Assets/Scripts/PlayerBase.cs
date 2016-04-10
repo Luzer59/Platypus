@@ -10,8 +10,6 @@ public class PlayerSound
 public class PlayerBase : MonoBehaviour
 {
     public float position;
-    public Vector2 startPos;
-    public Vector2 endPos;
     public float speed;
     public string button;
     public float activeZone;
@@ -22,7 +20,8 @@ public class PlayerBase : MonoBehaviour
     public PlayerSound[] activationSound;
     public PlayerSound[] deactivationSound;
     public Direction playerSide;
-    public bool[] spriteMove;
+    public Vector2[] startPos;
+    public Vector2[] endPos;
 
     protected bool controlsActive = true;
     protected GameController gameController;

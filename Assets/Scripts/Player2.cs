@@ -30,7 +30,7 @@ public class Player2 : PlayerBase
         position = 0;
         lastPosition = position;
         active = false;
-        SetPosition(true);
+        SetPosition();
     }
 
     void ActivateAttack()
@@ -68,18 +68,16 @@ public class Player2 : PlayerBase
                 position -= speed;
             }
         }
-        SetPosition(false);
+        SetPosition();
     }
 
-    void SetPosition(bool overrideCheck)
+    void SetPosition()
     {
         position = Mathf.Clamp01(position);
 
-        Vector2 currentPos = Vector2.Lerp(startPos, endPos, position);
-        if (spriteMove[gameController.currentSpriteSet] || overrideCheck)
-        {
-            transform.position = new Vector3(currentPos.x, currentPos.y, 0f);
-        }
+        Vector2 currentPos = Vector2.Lerp(startPos[gameController.currentSpriteSet], endPos[gameController.currentSpriteSet], position);
+
+        transform.position = new Vector3(currentPos.x, currentPos.y, 0f);
     }
 
     IEnumerator AttackTimer()

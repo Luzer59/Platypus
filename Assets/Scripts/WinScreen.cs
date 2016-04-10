@@ -13,6 +13,7 @@ public class WinScreen : MonoBehaviour
     public float shakeIntensity;
     public Sprite player1WinText;
     public Sprite player2WinText;
+    public GameObject ninja;
 
     void Start()
     {
