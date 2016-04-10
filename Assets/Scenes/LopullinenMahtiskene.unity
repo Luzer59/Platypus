@@ -144,6 +144,10 @@ Prefab:
       propertyPath: scale.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: order.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: endPos.Array.size
       value: 4
@@ -526,7 +530,7 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 3ba52681d9e570f4ab5f971eef9ef3ab, type: 3}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: endPos.Array.data[0].x
-      value: -4.1
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: endPos.Array.data[1].x
@@ -542,7 +546,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: startPos.Array.data[0].x
-      value: -4.1
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: startPos.Array.data[1].x
@@ -570,7 +574,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: scale.Array.data[3]
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: startPos.Array.data[3].x
@@ -578,7 +582,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: endPos.Array.data[3].x
-      value: -3
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: startPos.Array.data[2].x
@@ -598,11 +602,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: startPos.Array.data[3].y
-      value: -2
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 11439490, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
       propertyPath: endPos.Array.data[3].y
-      value: -2
+      value: -2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: order.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: order.Array.data[1]
+      value: 501
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: order.Array.data[2]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499372, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
+      propertyPath: order.Array.data[3]
+      value: 501
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf8f1a02896f7dc49885738e4e99f6c2, type: 2}
@@ -652,7 +672,7 @@ MonoBehaviour:
   - 0.45
   - 1
   - 0.5
-  order: 
+  order: f5010000f4010000f5010000f4010000
 --- !u!224 &586923205 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22438090, guid: 0ec93d1d078f002489cd47712c9ff4a8,
@@ -1308,11 +1328,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: endPos.Array.data[0].x
-      value: 3
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: endPos.Array.data[1].x
-      value: 2.75
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 11482760, guid: d083051c629114c4987bf53d552de591, type: 2}
       propertyPath: endPos.Array.data[1].y
