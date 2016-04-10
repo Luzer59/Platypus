@@ -13,7 +13,7 @@ public class PlayerBase : MonoBehaviour
     public float currentLife;
     public bool active;
     public bool isMoving = false;
-    public AudioClip actionSound;
+    public AudioClip[] actionSound;
     public Direction playerSide;
 
     protected bool controlsActive = true;
@@ -54,7 +54,8 @@ public class PlayerBase : MonoBehaviour
     {
         if (Input.GetKey(button) || MobileInput.GetTouch(playerSide))
         {
-            audio.PlayOneShot(actionSound);
+            int random = Random.Range(0, actionSound.Length);
+            audio.PlayOneShot(actionSound[random]);
         }
     }
 

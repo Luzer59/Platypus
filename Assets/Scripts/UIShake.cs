@@ -14,12 +14,36 @@ public class UIShake : MonoBehaviour
     {
         transform = GetComponent<RectTransform>();
         originPos = transform.position;
-        GameController.instance.uiShake = this;
+        if (GameController.instance)
+        {
+            GameController.instance.uiShake = this;
+        }
     }
 
     void Update()
     {
-        if (GameController.instance.gameState == GameState.GamePlay)
+        if (GameController.instance)
+        {
+            if (GameController.instance.gameState == GameState.GamePlay)
+            {
+                if (shakeActive)
+                {
+                    ShakeShakeShake();
+                    shakeWasActive = true;
+                }
+                else if (shakeWasActive)
+                {
+                    ShakeReset();
+                    shakeWasActive = false;
+                }
+            }
+            else if (shakeWasActive)
+            {
+                ShakeReset();
+                shakeWasActive = false;
+            }
+        }
+        else
         {
             if (shakeActive)
             {
@@ -43,5 +67,17 @@ public class UIShake : MonoBehaviour
     void ShakeReset()
     {
         transform.position = originPos;
+    }
+
+    public void ShakeForTime(float duration)
+    {
+        StartCoroutine(Shakeeeee(duration));
+    }
+
+    IEnumerator Shakeeeee(float duration)
+    {
+        shakeActive = true;
+        yield return new WaitForSeconds(duration);
+        shakeActive = false;
     }
 }

@@ -26,19 +26,7 @@ public class CustomAnimator : MonoBehaviour
 
     void SetNewSprites()
     {
-        int random = 0;
-        if (sprites.Length > 1)
-        {
-            while (true)
-            {
-                random = Random.Range(0, sprites.Length);
-                if (random != currentSpriteIndex)
-                {
-                    break;
-                }
-            }
-        }
-        currentSpriteIndex = random;
+        currentSpriteIndex = GameController.instance.currentSpriteSet;
     }
 
     void Update()

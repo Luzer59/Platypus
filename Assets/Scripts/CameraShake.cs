@@ -16,12 +16,36 @@ public class CameraShake : MonoBehaviour
         camera = GetComponent<Camera>();
         transform = GetComponent<Transform>();
         originPos = transform.position;
-        GameController.instance.cameraShake = this;
+        if (GameController.instance)
+        {
+            GameController.instance.cameraShake = this;
+        }
     }
 
     void Update()
     {
-        if (GameController.instance.gameState == GameState.GamePlay)
+        if (GameController.instance)
+        {
+            if (GameController.instance.gameState == GameState.GamePlay)
+            {
+                if (shakeActive)
+                {
+                    ShakeShakeShake();
+                    shakeWasActive = true;
+                }
+                else if (shakeWasActive)
+                {
+                    ShakeReset();
+                    shakeWasActive = false;
+                }
+            }
+            else if (shakeWasActive)
+            {
+                ShakeReset();
+                shakeWasActive = false;
+            }
+        }
+        else
         {
             if (shakeActive)
             {
@@ -45,5 +69,17 @@ public class CameraShake : MonoBehaviour
     void ShakeReset()
     {
         transform.position = originPos;
+    }
+
+    public void ShakeForTime(float duration)
+    {
+        StartCoroutine(Shakeeeee(duration));
+    }
+
+    IEnumerator Shakeeeee(float duration)
+    {
+        shakeActive = true;
+        yield return new WaitForSeconds(duration);
+        shakeActive = false;
     }
 }

@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
     #endregion
 
@@ -36,6 +36,10 @@ public class GameController : MonoBehaviour
     public GameState gameState = GameState.Start;
     public float startGameDelay;
     public float endGameDelay;
+    public AudioSource bgmFast;
+    public AudioSource bgmSlow;
+    public int currentSpriteSet;
+    public int spritesetCount;
 
     private GameState savedState;
     private ApacheEffect apacheEffect;
@@ -87,6 +91,8 @@ public class GameController : MonoBehaviour
             TimerCountdown();
             CheckEndConditions();
         }
+
+        AudioSystem();
     }
 
     void Reset()
@@ -104,6 +110,21 @@ public class GameController : MonoBehaviour
     void TimerCountdown()
     {
         roundTimer -= Time.deltaTime;
+    }
+
+    void AudioSystem()
+    {
+        if (player1.active || player2.active)
+        {
+            bgmFast.volume = 1f;
+            bgmSlow.volume = 0f;
+        }
+        else
+        {
+            bgmFast.volume = 0f;
+            bgmSlow.volume = 1f;
+        }
+        
     }
 
     void ShakeCheck()
@@ -194,8 +215,26 @@ public class GameController : MonoBehaviour
 
     public System.Action OnGameStart { get; set; }
 
+    void SetNewSpritesets()
+    {
+        int random = 0;
+        if (spritesetCount > 1)
+        {
+            while (true)
+            {
+                random = Random.Range(0, spritesetCount);
+                if (random != currentSpriteSet)
+                {
+                    break;
+                }
+            }
+        }
+        currentSpriteSet = random;
+    }
+
     IEnumerator StartGame()
     {
+        SetNewSpritesets();
         OnGameStart();
         yield return new WaitForSeconds(startGameDelay);
         gameState = GameState.GamePlay;
