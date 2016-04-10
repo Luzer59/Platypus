@@ -22,6 +22,7 @@ public class PlayerBase : MonoBehaviour
     public Direction playerSide;
     public Vector2[] startPos;
     public Vector2[] endPos;
+    public float[] scale;
 
     protected bool controlsActive = true;
     protected GameController gameController;

@@ -40,6 +40,10 @@ public class WinScreen : MonoBehaviour
 
     IEnumerator Effect(float showDuration)
     {
+        if (GameController.instance.roundTimer >= GameController.instance.roundStartTime - 1f)
+        {
+            ninja.SetActive(true);
+        }
         active = true;
         if (GameController.instance.player1Alive)
         {
@@ -58,5 +62,9 @@ public class WinScreen : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f,0f);
         image.enabled = false;
         active = false;
+        if (ninja.activeInHierarchy)
+        {
+            ninja.SetActive(false);
+        }
     }
 }
