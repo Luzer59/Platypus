@@ -163,6 +163,12 @@ public class ApacheEffect : MonoBehaviour
                 case 4:
                     apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(9, 14)];
                     break;
+                case 5:
+                    apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(14, 16)];
+                    break;
+                case 6:
+                    apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(16, 20)];
+                    break;
                 default:
                     apacheList[i].GetComponent<SpriteRenderer>().sprite = apacheTypes[Random.Range(0, 1)];
                     break;
