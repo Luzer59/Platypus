@@ -74,6 +74,15 @@ public class UIShake : MonoBehaviour
         StartCoroutine(Shakeeeee(duration));
     }
 
+    public void ShakeManualStart()
+    {
+        shakeActive = true;
+    }
+    public void ShakeManualStop()
+    {
+        shakeActive = false;
+    }
+
     IEnumerator Shakeeeee(float duration)
     {
         shakeActive = true;

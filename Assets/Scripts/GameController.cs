@@ -28,6 +28,8 @@ public class GameController : MonoBehaviour
     public Player2 player2;
     public bool player1Alive = true;
     public bool player2Alive = true;
+    public int player1Streak = 0;
+    public int player2Streak = 0;
     public float roundStartTime;
     public float roundTimer = 0f;
     public CameraShake cameraShake;
@@ -40,9 +42,11 @@ public class GameController : MonoBehaviour
     public AudioSource bgmSlow;
     public int currentSpriteSet;
     public int spritesetCount;
+    public AudioClip winSound;
 
     private GameState savedState;
     private ApacheEffect apacheEffect;
+    private AudioSource audio;
 
     //confetti shoot stuff
     public bool player1won = false;
@@ -56,6 +60,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         apacheEffect = GetComponent<ApacheEffect>();
         player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player1>();
         player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player2>();
@@ -116,13 +121,13 @@ public class GameController : MonoBehaviour
     {
         if (player1.active || player2.active)
         {
-            bgmFast.volume = 1f;
+            bgmFast.volume = 0.3f;
             bgmSlow.volume = 0f;
         }
         else
         {
             bgmFast.volume = 0f;
-            bgmSlow.volume = 1f;
+            bgmSlow.volume = 0.3f;
         }
         
     }
@@ -242,17 +247,22 @@ public class GameController : MonoBehaviour
 
     IEnumerator EndGame()
     {
+        PlayWinSound();
         OnGameEnd();
         gameState = GameState.GameEnd;
         if(player1Alive)
         {
             print("Player 1 wins");
             player1won = true;
+            player1Streak++;
+            player2Streak = 0;
         }
         else
         {
             print("Player 2 wins");
             player2won = true;
+            player2Streak++;
+            player1Streak = 0;
         }
         yield return new WaitForSeconds(endGameDelay);
         StartNewGame();
@@ -264,5 +274,10 @@ public class GameController : MonoBehaviour
         Reset();
         player1.Reset();
         player2.Reset();
+    }
+
+    void PlayWinSound()
+    {
+        audio.PlayOneShot(winSound);
     }
 }

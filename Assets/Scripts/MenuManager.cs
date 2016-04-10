@@ -5,8 +5,10 @@ public class MenuManager : MonoBehaviour
 {
     public ParticleSystem[] part;
     public float confettiDelay;
+    public AudioClip[] soundEffects;
 
     private int partIndex = 0;
+    private AudioSource audio;
 
     public void LoadGame()
     {
@@ -27,6 +29,7 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         if (part.Length != 0)
         {
             StartCoroutine(PartLoop());
@@ -54,4 +57,10 @@ public class MenuManager : MonoBehaviour
             yield return new WaitForSeconds(confettiDelay);
         }
     }
+
+    public void PlayAudioEffect(int index)
+    {
+        audio.PlayOneShot(soundEffects[index]);
+    }
 }
+

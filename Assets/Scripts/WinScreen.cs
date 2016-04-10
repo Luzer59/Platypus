@@ -7,6 +7,7 @@ public class WinScreen : MonoBehaviour
     private Image image;
     new private Transform transform;
     private Vector3 originPos;
+    private Vector3 originalOriginPos;
     private bool active = false;
 
     public float shakeIntensity;
@@ -18,6 +19,7 @@ public class WinScreen : MonoBehaviour
         image = GetComponent<Image>();
         transform = GetComponent<RectTransform>();
         originPos = transform.position;
+        originalOriginPos = originPos;
         GameController.instance.OnGameEnd += OnGameEnd;
     }
 
@@ -40,14 +42,19 @@ public class WinScreen : MonoBehaviour
         active = true;
         if (GameController.instance.player1Alive)
         {
+            originPos = originalOriginPos - new Vector3(4f, 0f, 0f);
+            transform.rotation = Quaternion.Euler(0f, 0f, 20f);
             image.sprite = player1WinText;
         }
         else
         {
+            originPos = originalOriginPos + new Vector3(4f, 0f, 0f);
+            transform.rotation = Quaternion.Euler(0f, 0f, -20f);
             image.sprite = player2WinText;
         }
         image.enabled = true;
         yield return new WaitForSeconds(showDuration);
+        transform.rotation = Quaternion.Euler(0f, 0f,0f);
         image.enabled = false;
         active = false;
     }

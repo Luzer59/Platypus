@@ -95,6 +95,8 @@ GameObject:
   - 224: {fileID: 70118683}
   - 222: {fileID: 70118685}
   - 114: {fileID: 70118684}
+  - 114: {fileID: 70118687}
+  - 114: {fileID: 70118686}
   m_Layer: 5
   m_Name: dude (4)
   m_TagString: Untagged
@@ -111,9 +113,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1543977119}
-  m_RootOrder: 10
+  m_Children:
+  - {fileID: 2031709694}
+  m_Father: {fileID: 1515735010}
+  m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 408, y: 113}
@@ -152,6 +155,88 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 70118682}
+--- !u!114 &70118686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70118682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 70118687}
+          m_MethodName: ShakeManualStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1123569506}
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1041813067}
+          m_MethodName: PlayAudioEffect
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 70118687}
+          m_MethodName: ShakeManualStop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &70118687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70118682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf80de5b12c4b0469b05d6bbf9ad179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 15
+  shakeActive: 0
 --- !u!1 &104744082
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +247,8 @@ GameObject:
   - 224: {fileID: 104744083}
   - 222: {fileID: 104744085}
   - 114: {fileID: 104744084}
+  - 114: {fileID: 104744087}
+  - 114: {fileID: 104744086}
   m_Layer: 5
   m_Name: dude (2)
   m_TagString: Untagged
@@ -178,9 +265,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1543977119}
-  m_RootOrder: 6
+  m_Children:
+  - {fileID: 667418853}
+  m_Father: {fileID: 1515735010}
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000061035156, y: 113}
@@ -219,6 +307,88 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 104744082}
+--- !u!114 &104744086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104744082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 104744087}
+          m_MethodName: ShakeManualStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 727668996}
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1041813067}
+          m_MethodName: PlayAudioEffect
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 104744087}
+          m_MethodName: ShakeManualStop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &104744087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104744082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf80de5b12c4b0469b05d6bbf9ad179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 15
+  shakeActive: 0
 --- !u!1 &171344008
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,13 +414,13 @@ RectTransform:
   m_GameObject: {fileID: 171344008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 1543977119}
-  m_RootOrder: 5
+  m_Father: {fileID: 1767808568}
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -204, y: -161}
+  m_AnchoredPosition: {x: 0, y: -51.000008}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &171344010
@@ -297,6 +467,7 @@ GameObject:
   - 222: {fileID: 476123920}
   - 114: {fileID: 476123919}
   - 114: {fileID: 476123918}
+  - 114: {fileID: 476123921}
   m_Layer: 5
   m_Name: Menu button
   m_TagString: Untagged
@@ -314,7 +485,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.36, y: 3.66, z: 1}
   m_Children: []
-  m_Father: {fileID: 1543977119}
+  m_Father: {fileID: 1515735010}
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -406,6 +577,87 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 476123916}
+--- !u!114 &476123921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 476123916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1515735011}
+          m_MethodName: ShakeForTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!1001 &504998919
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 19905648, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1007
+      objectReference: {fileID: 0}
+    - target: {fileID: 164642, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_Name
+      value: ConfettiSystemSmall (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11445002, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &667418852
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,13 +683,13 @@ RectTransform:
   m_GameObject: {fileID: 667418852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 1543977119}
-  m_RootOrder: 7
+  m_Father: {fileID: 104744083}
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 9}
+  m_AnchoredPosition: {x: -3.0000138, y: -52.000004}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667418854
@@ -473,6 +725,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 667418852}
+--- !u!198 &727668996 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19832554, guid: 2e8de381189a7d34db87c3df9c92942b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2098094196}
 --- !u!1001 &747790901
 Prefab:
   m_ObjectHideFlags: 0
@@ -480,6 +737,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11456606, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
+      propertyPath: soundEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 459632, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 396
@@ -512,8 +773,118 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11456606, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
+      propertyPath: soundEffects.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 820137088c1ab2a47acbb97e7b0882e1, type: 3}
+    - target: {fileID: 8214906, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &811752217
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 19905648, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1007
+      objectReference: {fileID: 0}
+    - target: {fileID: 164642, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_Name
+      value: ConfettiSystemSmall (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11445002, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &860524851
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 19905648, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1007
+      objectReference: {fileID: 0}
+    - target: {fileID: 164642, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_Name
+      value: ConfettiSystemSmall (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11445002, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &955413174
 GameObject:
@@ -540,13 +911,13 @@ RectTransform:
   m_GameObject: {fileID: 955413174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 1543977119}
-  m_RootOrder: 3
+  m_Father: {fileID: 1607798966}
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -408, y: 13}
+  m_AnchoredPosition: {x: 0, y: -50.000008}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955413176
@@ -613,13 +984,13 @@ RectTransform:
   m_GameObject: {fileID: 1122146551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 1543977119}
-  m_RootOrder: 9
+  m_Father: {fileID: 1124292551}
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 205, y: -166}
+  m_AnchoredPosition: {x: 0.49998474, y: -53.500008}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122146553
@@ -655,6 +1026,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122146551}
+--- !u!198 &1123569506 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19832554, guid: 2e8de381189a7d34db87c3df9c92942b,
+    type: 2}
+  m_PrefabInternal: {fileID: 504998919}
 --- !u!1 &1124292550
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +1041,8 @@ GameObject:
   - 224: {fileID: 1124292551}
   - 222: {fileID: 1124292553}
   - 114: {fileID: 1124292552}
+  - 114: {fileID: 1124292555}
+  - 114: {fileID: 1124292554}
   m_Layer: 5
   m_Name: dude (3)
   m_TagString: Untagged
@@ -681,9 +1059,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1543977119}
-  m_RootOrder: 8
+  m_Children:
+  - {fileID: 1122146552}
+  m_Father: {fileID: 1515735010}
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 204, y: -59}
@@ -722,6 +1101,98 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1124292550}
+--- !u!114 &1124292554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124292550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1124292555}
+          m_MethodName: ShakeManualStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1283168951}
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1041813067}
+          m_MethodName: PlayAudioEffect
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1124292555}
+          m_MethodName: ShakeManualStop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1124292555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124292550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf80de5b12c4b0469b05d6bbf9ad179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 15
+  shakeActive: 0
+--- !u!198 &1208546427 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19832554, guid: 2e8de381189a7d34db87c3df9c92942b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1625320137}
+--- !u!198 &1217058948 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19832554, guid: 2e8de381189a7d34db87c3df9c92942b,
+    type: 2}
+  m_PrefabInternal: {fileID: 860524851}
 --- !u!1 &1269832166
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +1279,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!198 &1283168951 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19832554, guid: 2e8de381189a7d34db87c3df9c92942b,
+    type: 2}
+  m_PrefabInternal: {fileID: 811752217}
 --- !u!1 &1412481545
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +1311,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.58, y: 5.07, z: 1}
   m_Children: []
-  m_Father: {fileID: 1543977119}
+  m_Father: {fileID: 1515735010}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -875,6 +1351,59 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412481545}
+--- !u!1 &1515735009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1515735010}
+  - 114: {fileID: 1515735011}
+  m_Layer: 5
+  m_Name: Shaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1515735010
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1515735009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1412481546}
+  - {fileID: 476123917}
+  - {fileID: 1607798966}
+  - {fileID: 1767808568}
+  - {fileID: 104744083}
+  - {fileID: 1124292551}
+  - {fileID: 70118683}
+  m_Father: {fileID: 1543977119}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1515735011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1515735009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf80de5b12c4b0469b05d6bbf9ad179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 15
+  shakeActive: 0
 --- !u!224 &1543977119
 RectTransform:
   m_ObjectHideFlags: 0
@@ -886,18 +1415,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1412481546}
-  - {fileID: 476123917}
-  - {fileID: 1607798966}
-  - {fileID: 955413175}
-  - {fileID: 1767808568}
-  - {fileID: 171344009}
-  - {fileID: 104744083}
-  - {fileID: 667418853}
-  - {fileID: 1124292551}
-  - {fileID: 1122146552}
-  - {fileID: 70118683}
-  - {fileID: 2031709694}
+  - {fileID: 1515735010}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -915,6 +1433,8 @@ GameObject:
   - 224: {fileID: 1607798966}
   - 222: {fileID: 1607798968}
   - 114: {fileID: 1607798967}
+  - 114: {fileID: 1607798970}
+  - 114: {fileID: 1607798969}
   m_Layer: 5
   m_Name: dude
   m_TagString: Untagged
@@ -931,8 +1451,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1543977119}
+  m_Children:
+  - {fileID: 955413175}
+  m_Father: {fileID: 1515735010}
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -972,6 +1493,135 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1607798965}
+--- !u!114 &1607798969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1607798965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1607798970}
+          m_MethodName: ShakeManualStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1208546427}
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1041813067}
+          m_MethodName: PlayAudioEffect
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1607798970}
+          m_MethodName: ShakeManualStop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1607798970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1607798965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf80de5b12c4b0469b05d6bbf9ad179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 15
+  shakeActive: 0
+--- !u!1001 &1625320137
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19905648, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1007
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11445002, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1632746645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,7 +1689,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 2
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1269832170}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1047,7 +1697,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 916
   m_TargetDisplay: 0
 --- !u!1 &1647712879
 GameObject:
@@ -1117,6 +1767,8 @@ GameObject:
   - 224: {fileID: 1767808568}
   - 222: {fileID: 1767808570}
   - 114: {fileID: 1767808569}
+  - 114: {fileID: 1767808572}
+  - 114: {fileID: 1767808571}
   m_Layer: 5
   m_Name: dude (1)
   m_TagString: Untagged
@@ -1133,9 +1785,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1543977119}
-  m_RootOrder: 4
+  m_Children:
+  - {fileID: 171344009}
+  m_Father: {fileID: 1515735010}
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -204, y: -59}
@@ -1174,6 +1827,88 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1767808567}
+--- !u!114 &1767808571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767808567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1767808572}
+          m_MethodName: ShakeManualStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1217058948}
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1041813067}
+          m_MethodName: PlayAudioEffect
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1767808572}
+          m_MethodName: ShakeManualStop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1767808572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767808567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf80de5b12c4b0469b05d6bbf9ad179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 15
+  shakeActive: 0
 --- !u!1 &1973514114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,13 +1995,13 @@ RectTransform:
   m_GameObject: {fileID: 2031709693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 1543977119}
-  m_RootOrder: 11
+  m_Father: {fileID: 70118683}
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 408, y: 12.999985}
+  m_AnchoredPosition: {x: 0, y: -50.000004}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031709695
@@ -1302,3 +2037,54 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2031709693}
+--- !u!1001 &2098094196
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408786, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 19905648, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1007
+      objectReference: {fileID: 0}
+    - target: {fileID: 164642, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+      propertyPath: m_Name
+      value: ConfettiSystemSmall (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11445002, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 2e8de381189a7d34db87c3df9c92942b, type: 2}
+  m_IsPrefabParent: 0

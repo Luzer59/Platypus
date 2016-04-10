@@ -342,7 +342,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11456606, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
       propertyPath: confettiDelay
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11456606, guid: 3e93090791fda884aa08c02d21cd969f, type: 2}
       propertyPath: part.Array.data[0]
