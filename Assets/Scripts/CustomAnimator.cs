@@ -26,15 +26,15 @@ public class CustomAnimator : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    void SetNewSprites()
-    {
-        currentSpriteIndex = GameController.instance.currentSpriteSet;
-        transform.localScale = new Vector3(scale[currentSpriteIndex], scale[currentSpriteIndex], scale[currentSpriteIndex]);
-        sr.sortingOrder = order[currentSpriteIndex];
-    }
-
     void Update()
     {
+        currentSpriteIndex = GameController.instance.currentSpriteSet;
         sr.sprite = sprites[currentSpriteIndex].sprites[Mathf.RoundToInt((sprites[currentSpriteIndex].sprites.Length - 1) * player.position)];
+    }
+
+    void SetNewSprites()
+    {
+        transform.localScale = new Vector3(scale[currentSpriteIndex], scale[currentSpriteIndex], scale[currentSpriteIndex]);
+        sr.sortingOrder = order[currentSpriteIndex];
     }
 }

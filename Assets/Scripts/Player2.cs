@@ -6,9 +6,9 @@ public class Player2 : PlayerBase
     private bool activatedNow;
     private bool forceBack = false;
 
-    protected override void Start()
+    public override void Activate()
     {
-        base.Start();
+        base.Activate();
         Reset();
     }
 

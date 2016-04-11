@@ -16,9 +16,9 @@ public class Player1 : PlayerBase
         }
     }
 
-    protected override void Start()
+    public override void Activate()
     {
-        base.Start();
+        base.Activate();
         Reset();
     }
 

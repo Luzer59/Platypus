@@ -70,6 +70,8 @@ public class GameController : MonoBehaviour
         apacheEffect = GetComponent<ApacheEffect>();
         player1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player1>();
         player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player2>();
+        player1.Activate();
+        player2.Activate();
         Reset();
         StartCoroutine(StartGame());
     }

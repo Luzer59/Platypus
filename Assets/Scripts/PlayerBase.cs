@@ -29,7 +29,7 @@ public class PlayerBase : MonoBehaviour
     protected AudioSource audio;
     protected bool lastActive = false;
 
-    protected virtual void Start()
+    public virtual void Activate()
     {
         audio = GetComponent<AudioSource>();
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
